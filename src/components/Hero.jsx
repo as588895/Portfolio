@@ -16,6 +16,7 @@ export default function Hero(){
               <a href="#projects" className="btn-primary">View Projects</a>
               <a href="mailto:as588895@gmail.com" className="btn-outline">Hire Me</a>
               <a href="https://linkedin.com/in/aman-singh-222364298/" target="_blank" rel="noreferrer" className="btn-outline">LinkedIn</a>
+              <a href="https://drive.google.com/drive/folders/1Di_gj0KIESJ4gRS_mJiIWjB77EO_HvSj" download className="btn-outline">Resume</a>
             </div>
             <div className="mt-8 grid gap-3 sm:grid-cols-3">
               <div className="card-box p-5">
@@ -36,7 +37,7 @@ export default function Hero(){
         <motion.div initial={{opacity:0, x:20}} animate={{opacity:1, x:0}} transition={{duration:0.6}} className="flex justify-center">
           <div className="w-full max-w-md">
             <div className="rounded-full bg-gradient-to-r from-primary/10 to-accent/10 p-12 flex items-center justify-center">
-              <img src="https://media.licdn.com/dms/image/v2/D5603AQHLq3sMffdC0Q/profile-displayphoto-scale_400_400/B56Z4rboRCIsAg-/0/1778845127005?e=1782345600&v=beta&t=dATWx3Mh1q8oQ7h2KoOXPWlr64nd9C14iQZXCNhnK4c" alt="Aman Singh profile" className="w-64 h-64 rounded-full object-cover shadow-lg" />
+              <img src="https://mysterious-red-ngek2obz.edgeone.app/1778843907798~2.png" alt="Aman Singh profile" className="w-90 h-90 rounded-full object-cover shadow-lg" />
             </div>
           </div>
         </motion.div>
