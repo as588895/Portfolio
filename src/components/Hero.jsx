@@ -37,7 +37,7 @@ export default function Hero(){
         <motion.div initial={{opacity:0, x:20}} animate={{opacity:1, x:0}} transition={{duration:0.6}} className="flex justify-center">
           <div className="w-full max-w-md">
             <div className="rounded-full bg-gradient-to-r from-primary/10 to-accent/10 p-12 flex items-center justify-center">
-              <img src="https://mysterious-red-ngek2obz.edgeone.app/1778843907798~2.png" alt="Aman Singh profile" className="w-90 h-90 rounded-full object-cover shadow-lg" />
+              <img src="/profile.svg" alt="Aman Singh profile" className="w-64 h-64 rounded-full object-cover shadow-lg" />
             </div>
           </div>
         </motion.div>
