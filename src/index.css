@@ -155,3 +155,40 @@ header a:hover{color:var(--primary)}
   .btn-primary, .btn-outline{width:100%;text-align:center}
 }
 
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.skill-card {
+  width: 140px;
+  height: 120px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(0,255,200,0.2);
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  transition: 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  border-color: #00ffd5;
+}
+
+.skill-icon {
+  font-size: 2.5rem;
+  color: #00ffd5;
+  margin-bottom: 10px;
+}
+
+.skill-card p {
+  color: white;
+  font-size: 1rem;
+}
