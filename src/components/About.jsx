@@ -6,7 +6,7 @@ export default function About(){
     <section id="about" className="py-12">
       <div className="grid md:grid-cols-2 gap-8 items-start">
         <div className="flex justify-center">
-          <img src="https://img.sanishtech.com/u/ce9f9bbe97e9eebc1d9baa4fe8c6e534.png" alt="Aman Singh profile" className="w-full max-w-[550px] h-auto rounded-xl shadow-xl object-cover" />
+          <img src="/public/aman.png" alt="Aman Singh profile" className="w-full max-w-[550px] h-auto rounded-xl shadow-xl object-cover" />
         </div>
         <motion.div initial={{opacity:0, y:10}} whileInView={{opacity:1, y:0}} viewport={{once:true}}>
           <h2 className="text-2xl font-bold">About Me</h2>

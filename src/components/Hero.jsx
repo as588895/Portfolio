@@ -48,11 +48,22 @@ export default function Hero(){
           </div>
         </motion.div>
         <motion.div initial={{opacity:0, x:20}} animate={{opacity:1, x:0}} transition={{duration:0.6}} className="flex justify-center">
-          <div className="w-full max-w-md">
+          {/* <div className="w-full max-w-md">
             <div className="rounded-full bg-gradient-to-r from-primary/10 to-accent/10 p-12 flex items-center justify-center">
               <img src="https://img.sanishtech.com/u/ce9f9bbe97e9eebc1d9baa4fe8c6e534.png" alt="Aman Singh profile" className="w-82 h-82 rounded-full object-cover shadow-lg" />
             </div>
-          </div>
+          </div> */}
+
+          <div className="w-full max-w-md">
+  <div className="rounded-full bg-gradient-to-r from-primary/10 to-accent/10 p-12 flex items-center justify-center">
+    <img
+      src="/public/aman.png"
+      alt="Aman Singh profile"
+      className="w-85 h-85 rounded-full object-cover object-center shadow-lg"
+    />
+    
+  </div>
+</div>
         </motion.div>
       </div>
     </section>

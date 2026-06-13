@@ -22,7 +22,9 @@ export default function App(){
       <ScrollProgress />
       {loading ? <Loading /> : null}
       <Navbar />
-      <main className="container mx-auto px-6 lg:px-8">
+      {/* <main className="container mx-auto px-6 lg:px-8"> */}
+        {/* <main className="max-w-7xl mx-auto px-6 lg:px-8"> */}
+        {/* <main className="max-w-[1600px] mx-auto px-6 lg:px-12">
         <Hero />
         <About />
         <Skills />
@@ -31,7 +33,19 @@ export default function App(){
         <Achievements />
         <Certifications />
         <Contact />
-      </main>
+      </main> */}
+      <main className="w-full">
+  <div className="w-[98%] mx-auto">
+    <Hero />
+    <About />
+    <Skills />
+    <Education />
+    <Projects />
+    <Achievements />
+    <Certifications />
+    <Contact />
+  </div>
+</main>
       <Footer />
       <BackToTop />
     </div>
