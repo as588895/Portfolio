@@ -18,12 +18,17 @@ export default function About(){
               <div className="mt-3 font-semibold">CGPA 7.67</div>
             </div>
             <div className="card-box p-5">
-              <div className="text-sm text-muted">Currently</div>
-              <div className="mt-2 text-lg font-semibold">Building scalable MERN applications</div>
-              <p className="text-sm text-muted mt-3">Solving real-world problems by combining backend architecture, cloud-ready workflows, and polished frontend experiences.</p>
-            </div>
+  <div className="text-sm text-muted">Currently</div>
+  <div className="mt-2 text-lg font-semibold">
+    Building Production-Ready MERN Applications
+  </div>
+  <p className="text-sm text-muted mt-3">
+    Developing scalable full-stack platforms inspired by real-world products like Airbnb, with secure authentication, REST APIs, database optimization, and responsive user experiences.
+  </p>
+</div>
           </div>
-          <p className="mt-6 text-muted text-lg leading-relaxed">Information Technology undergraduate with a strong interest in Full Stack Development and Software Engineering. Experienced in building scalable web applications using the MERN stack (MongoDB, Express.js, React.js, Node.js). Passionate about problem solving, backend development, and creating user-friendly web applications.</p>
+          <p className="mt-6 text-muted text-lg leading-relaxed">
+  Information Technology Undergraduate at IMSEC (Class of 2027) specializing in MERN Stack Development. Proficient in building full-stack web applications, designing RESTful APIs, and managing databases. Actively seeking opportunities to apply technical skills, contribute to impactful projects, and grow as a Software Developer.</p>
           <div className="mt-6 grid gap-3 sm:grid-cols-2">
             <div className="p-5 border border-solid border-slate-200 rounded-3xl bg-slate-50 dark:bg-slate-900 dark:border-slate-700">
               <h3 className="font-semibold">Core Foundations</h3>

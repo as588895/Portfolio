@@ -1,21 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-const progressSkills = [
-  {title:'Java', level:85},
-  {title:'JavaScript', level:90},
-  {title:'React.js', level:88},
-  {title:'Node.js', level:80},
-]
-
-// const categoryCards = [
-//   {title:'Frontend', items:['HTML', 'CSS', 'JavaScript', 'React.js', 'Bootstrap', 'Tailwind CSS']},
-//   {title:'Backend', items:['Node.js', 'Express.js', 'REST APIs']},
-//   {title:'Databases', items:['MongoDB', 'MySQL', 'Oracle']},
-//   {title:'Tools', items:['Git', 'GitHub', 'VS Code']},
-//   {title:'Core Subjects', items:['Data Structures & Algorithms', 'Object-Oriented Programming', 'DBMS', 'Operating Systems', 'Computer Networks']}
-// ]
-
 import {
   FaHtml5,
   FaCss3Alt,
@@ -36,7 +21,19 @@ import {
   SiVisualstudiocode,
 } from "react-icons/si";
 
+import { FaJava, FaPython } from "react-icons/fa";
+import { SiC } from "react-icons/si";
+
 const categoryCards = [
+  {
+  title: "Programming Languages",
+  items: [
+    { name: "C", icon: "💻" },
+    { name: "Java", icon: <FaJava /> },
+    { name: "JavaScript", icon: <FaJs /> },
+    { name: "Python", icon: <FaPython /> },
+  ],
+},
   {
     title: "Frontend",
     items: [
@@ -76,19 +73,7 @@ const categoryCards = [
 
 
 
-function SkillProgress({title,level}){
-  return (
-    <motion.div whileHover={{y:-4}} className="p-5 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 shadow-sm">
-      <div className="flex justify-between items-center">
-        <div className="font-semibold">{title}</div>
-        <div className="text-sm text-muted">{level}%</div>
-      </div>
-      <div className="mt-4 h-3 rounded-full bg-slate-200 dark:bg-slate-800 overflow-hidden">
-        <motion.div className="h-full rounded-full bg-gradient-to-r from-primary to-accent" initial={{width:0}} animate={{width:`${level}%`}} transition={{duration:1}} />
-      </div>
-    </motion.div>
-  )
-}
+
 
 export default function Skills(){
   return (
@@ -99,16 +84,12 @@ export default function Skills(){
           <p className="text-muted mt-2">Technical Skills</p>
         </div>
       </div>
-      <div className="mt-8 grid gap-6 md:grid-cols-2">
-        {progressSkills.map(skill=> <SkillProgress key={skill.title} {...skill} />)}
-      </div>
+      
       <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
         {categoryCards.map(card => (
           <div key={card.title} className="card-box p-5">
             <div className="font-semibold mb-3">{card.title}</div>
-            {/* <div className="grid gap-2 text-sm text-muted">
-              {card.items.map(item => <div key={item}>• {item}</div>)}
-            </div> */}
+            
 
             <div className="skills-container">
   {card.items.map((item, index) => (

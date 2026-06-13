@@ -8,7 +8,7 @@ const projects = [
     tech: 'Node.js, Express.js, MongoDB, EJS, Bootstrap, Passport.js, Cloudinary',
     live: '#',
     repo: 'https://github.com/as588895/WanderLust-Project',
-    image: 'https://picsum.photos/seed/wander/900/500'
+    image: 'https://obliged-bronze-aqijcwle.edgeone.app/Screenshot%202026-06-13%20121255.png'
   },
   {
     title: 'Spotify Clone',
@@ -16,7 +16,7 @@ const projects = [
     tech: 'HTML, CSS, JavaScript',
     live: '#',
     repo: 'https://github.com/as588895/Web-Technology-Program/tree/main/CSS/Project(CSS)',
-    image: 'https://picsum.photos/seed/spotify/900/500'
+    image: 'https://repository-images.githubusercontent.com/636382929/7f38c0b4-4ced-441b-a342-5fcfa79ea89b'
   }
 ]
 

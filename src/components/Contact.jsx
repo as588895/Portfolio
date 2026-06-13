@@ -10,9 +10,13 @@ export default function Contact(){
     e.preventDefault()
     setStatus('sending')
     // TODO: replace serviceID, templateID, publicKey
-    emailjs.sendForm('YOUR_SERVICE_ID','YOUR_TEMPLATE_ID', formRef.current, 'YOUR_PUBLIC_KEY')
+    emailjs.sendForm('service_qo9snrd','template_8xb4h6b', formRef.current, 'ulXV5QKw2qt80B8kx')
       .then(()=>{ setStatus('sent'); formRef.current.reset() })
-      .catch(()=> setStatus('error'))
+      // .catch(()=> setStatus('error'))
+      .catch((err) => {
+      console.log(err)
+      setStatus('error')
+    })
   }
 
   return (
@@ -31,20 +35,30 @@ export default function Contact(){
               <div className="text-sm text-muted mt-2">as588895@gmail.com</div>
             </div>
             <div className="flex gap-3 mt-3">
-              <a href="https://github.com/" className="btn-outline inline-flex items-center gap-2"><FiGithub /> GitHub</a>
-              <a href="https://linkedin.com/in/aman-singh-222364298/" className="btn-outline inline-flex items-center gap-2"><FiLinkedin /> LinkedIn</a>
+              <a href="https://github.com/" className="btn-primary inline-flex items-center gap-2"><FiGithub /> GitHub</a>
+              <a href="https://linkedin.com/in/aman-singh-222364298/" className="btn-primary inline-flex items-center gap-2"><FiLinkedin /> LinkedIn</a>
             </div>
           </div>
         </div>
         <form ref={formRef} onSubmit={sendEmail} className="contact-card">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-            <input name="name" required placeholder="Name" className="w-full p-3 rounded border border-slate-300 bg-slate-50 dark:border-slate-700 dark:bg-slate-950" />
-            <input name="email" type="email" required placeholder="Email" className="w-full p-3 rounded border border-slate-300 bg-slate-50 dark:border-slate-700 dark:bg-slate-950" />
+            {/* <input name="name" required placeholder="Name" className="w-full p-3 rounded border border-slate-300 bg-slate-50 dark:border-slate-700 dark:bg-slate-950" /> */}
+            <input type="text" name="from_name" required placeholder="Your Name" className="w-full p-3 rounded border border-slate-300 bg-slate-50 dark:border-slate-700 dark:bg-slate-950" />
+            {/* <input name="email" type="email" required placeholder="Email" className="w-full p-3 rounded border border-slate-300 bg-slate-50 dark:border-slate-700 dark:bg-slate-950" />
+          </div> */}
+          <input type="email" name="from_email" required placeholder="Your Email" className="w-full p-3 rounded border border-slate-300 bg-slate-50 dark:border-slate-700 dark:bg-slate-950" />
           </div>
           <input name="subject" placeholder="Subject" className="w-full p-3 rounded border border-slate-300 bg-slate-50 dark:border-slate-700 dark:bg-slate-950 mt-3" />
-          <textarea name="message" placeholder="Message" className="w-full p-3 rounded border border-slate-300 bg-slate-50 dark:border-slate-700 dark:bg-slate-950 h-40 mt-3" />
+          <textarea name="message" placeholder="Your Message" className="w-full p-3 rounded border border-slate-300 bg-slate-50 dark:border-slate-700 dark:bg-slate-950 h-40 mt-3" />
           <button type="submit" className="w-full btn-primary mt-3">Send Message</button>
-          <div className="text-sm text-muted mt-2">{status === 'sending' ? 'Sending...' : status === 'sent' ? 'Message sent — thank you!' : status === 'error' ? 'Failed to send.' : ''}</div>
+          {/* <div className="text-sm text-muted mt-2">{status === 'sending' ? 'Sending...' : status === 'sent' ? 'Message sent — thank you!' : status === 'error' ? 'Failed to send.' : ''}</div> */}
+
+        <p>
+           {status === 'sending' && 'Sending...'}
+           {status === 'sent' && 'Message sent — thank you!'}
+           {status === 'error' && 'Failed to send.'}
+        </p>
+
         </form>
       </div>
     </section>
