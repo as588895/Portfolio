@@ -57,7 +57,7 @@ export default function Hero(){
           <div className="w-full max-w-md">
   <div className="rounded-full bg-gradient-to-r from-primary/10 to-accent/10 p-12 flex items-center justify-center">
     <img
-      src="/public/aman.png"
+      src="/aman.png"
       alt="Aman Singh profile"
       className="w-85 h-85 rounded-full object-cover object-center shadow-lg"
     />
