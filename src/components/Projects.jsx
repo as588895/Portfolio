@@ -3,20 +3,20 @@ import { motion } from 'framer-motion'
 
 const projects = [
   {
-    title: 'Wanderlust - Travel Listing Platform',
+    title: 'WanderNest - Travel & Accommodation Platform',
     desc: 'Full-stack travel accommodation platform with authentication, reviews, ratings, image uploads and REST APIs.',
     tech: 'Node.js, Express.js, MongoDB, EJS, Bootstrap, Passport.js, Cloudinary',
     live: 'https://wandernest-travel-accommodation-platform.onrender.com/',
-    repo: 'https://github.com/as588895/WanderLust-Project',
+    repo: 'https://github.com/as588895/WanderNest-Travel-Accommodation-Platform',
     image: '/wandernest.png'
   },
   {
     title: 'Spotify Clone',
     desc: 'Spotify-inspired music streaming web app with playback controls, playlists and responsive UI.',
     tech: 'HTML, CSS, JavaScript',
-    live: '#',
+    live: 'https://spotify-clone-theta-silk.vercel.app/',
     repo: 'https://github.com/as588895/Web-Technology-Program/tree/main/CSS/Project(CSS)',
-    image: 'https://repository-images.githubusercontent.com/636382929/7f38c0b4-4ced-441b-a342-5fcfa79ea89b'
+    image: '/spotify.png'
   }
 ]
 
