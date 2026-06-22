@@ -6,9 +6,9 @@ const projects = [
     title: 'Wanderlust - Travel Listing Platform',
     desc: 'Full-stack travel accommodation platform with authentication, reviews, ratings, image uploads and REST APIs.',
     tech: 'Node.js, Express.js, MongoDB, EJS, Bootstrap, Passport.js, Cloudinary',
-    live: 'https://staysphere-travel-and-accommodation.onrender.com/',
+    live: 'https://wandernest-travel-accommodation-platform.onrender.com/',
     repo: 'https://github.com/as588895/WanderLust-Project',
-    image: 'https://obliged-bronze-aqijcwle.edgeone.app/Screenshot%202026-06-13%20121255.png'
+    image: '/wandernest.png'
   },
   {
     title: 'Spotify Clone',
