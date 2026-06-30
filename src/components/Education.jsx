@@ -1,9 +1,27 @@
 import React from 'react'
 
 const timeline = [
-  {title:'B.Tech Information Technology', org:'IMS Engineering College, Ghaziabad', range:'2023 - 2027', details:'CGPA: 7.67'},
-  {title:'Senior Secondary (PCM)', org:'CBSE', range:'', details:'76.8%'},
-  {title:'Secondary', org:'CBSE', range:'', details:'70.4%'}
+  // {title:'B.Tech Information Technology', org:'IMS Engineering College, Ghaziabad', range:'2023 - 2027', details:'CGPA: 7.79'},
+  {
+  title: 'B.Tech Information Technology',
+  org: 'IMS Engineering College, Ghaziabad',
+  range: '2023 - 2027',
+  details: 'Current CGPA: 7.79/10'
+},
+  // {title:'Senior Secondary (PCM)', org:'CBSE', range:'', details:'76.8%'},
+  // {title:'Secondary', org:'CBSE', range:'', details:'70.4%'}
+  {
+  title: 'Senior Secondary (Class XII - PCM)',
+  org: 'Central Board of Secondary Education (CBSE)',
+  range: '',
+  details: 'Scored 76.8%'
+},
+{
+  title: 'Secondary (Class X)',
+  org: 'Central Board of Secondary Education (CBSE)',
+  range: '',
+  details: 'Scored 70.4%'
+}
 ]
 
 export default function Education(){

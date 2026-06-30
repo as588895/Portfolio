@@ -18,6 +18,7 @@ html.dark{
   --surface: rgba(15,23,42,0.88);
   --surface-soft: rgba(15,23,42,0.75);
   --muted: #94a3b8;
+  --secondary: #ffffff;
 }
 
 html{
@@ -189,6 +190,7 @@ header a:hover{color:var(--primary)}
 }
 
 .skill-card p {
-  color: white;
+  color: var(--secondary);
   font-size: 1rem;
+  font-weight: 500;
 }

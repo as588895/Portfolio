@@ -10,7 +10,6 @@ import { motion } from 'framer-motion'
 const counters = [
   { label: 'DSA Problems Solved', value: '200+' },
   { label: 'LeetCode Streak Badges', value: '50 Days & 100 Days' },
-  { label: 'LeetCode Knight Badge', value: '🛡️ Knight' },
   { label: 'HackerRank Rating', value: '3⭐' }
 ]
 
