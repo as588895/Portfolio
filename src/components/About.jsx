@@ -15,7 +15,7 @@ export default function About(){
               <div className="text-sm text-muted">Education</div>
               <div className="mt-2 text-lg font-semibold">B.Tech Information Technology</div>
               <div className="text-sm text-muted mt-1">IMS Engineering College, Ghaziabad</div>
-              <div className="mt-3 font-semibold">CGPA 7.67</div>
+              <div className="mt-3 font-semibold">Current CGPA: 7.79</div>
             </div>
             <div className="card-box p-5">
   <div className="text-sm text-muted">Currently</div>
