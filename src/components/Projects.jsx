@@ -3,8 +3,8 @@ import { motion } from 'framer-motion'
 
 const projects = [
   {
-    title: 'WanderNest - Travel & Accommodation Platform',
-    desc: 'Full-stack travel accommodation platform with authentication, reviews, ratings, image uploads and REST APIs.',
+    title: 'WanderNest - Travel & Accommodation Booking Platform',
+    desc: 'Full-stack travel & accommodation booking platform with authentication, reviews, ratings, image uploads and REST APIs.',
     tech: 'Node.js, Express.js, MongoDB, EJS, Bootstrap, Passport.js, Cloudinary',
     live: 'https://wandernest-travel-accommodation-platform.onrender.com/',
     repo: 'https://github.com/as588895/WanderNest-Travel-Accommodation-Platform',

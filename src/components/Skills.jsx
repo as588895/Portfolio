@@ -19,6 +19,9 @@ import {
   SiMysql,
   SiOracle,
   SiVisualstudiocode,
+  SiPostman,
+  SiRender,
+  SiVercel,
 } from "react-icons/si";
 
 import { FaJava, FaPython } from "react-icons/fa";
@@ -67,9 +70,12 @@ const categoryCards = [
       { name: "Git", icon: <FaGitAlt /> },
       { name: "GitHub", icon: <FaGithub /> },
       { name: "VS Code", icon: <SiVisualstudiocode /> },
+      { name: "Postman", icon: <SiPostman /> },
+      { name: "Render", icon: <SiRender /> },
+      { name: "Vercel", icon: <SiVercel  /> },
     ],
   },
-];
+]; 
 
 
 
