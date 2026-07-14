@@ -1,5 +1,5 @@
-import React from 'react'
-import { motion } from 'framer-motion'
+import React from "react";
+import { motion } from "framer-motion";
 
 import {
   FaHtml5,
@@ -29,14 +29,14 @@ import { SiC } from "react-icons/si";
 
 const categoryCards = [
   {
-  title: "Programming Languages",
-  items: [
-    { name: "C", icon: "💻" },
-    { name: "Java", icon: <FaJava /> },
-    { name: "JavaScript", icon: <FaJs /> },
-    { name: "Python", icon: <FaPython /> },
-  ],
-},
+    title: "Programming Languages",
+    items: [
+      { name: "C", icon: "💻" },
+      { name: "Java", icon: <FaJava /> },
+      { name: "JavaScript", icon: <FaJs /> },
+      { name: "Python", icon: <FaPython /> },
+    ],
+  },
   {
     title: "Frontend",
     items: [
@@ -72,43 +72,39 @@ const categoryCards = [
       { name: "VS Code", icon: <SiVisualstudiocode /> },
       { name: "Postman", icon: <SiPostman /> },
       { name: "Render", icon: <SiRender /> },
-      { name: "Vercel", icon: <SiVercel  /> },
+      { name: "Vercel", icon: <SiVercel /> },
     ],
   },
-]; 
+];
 
-
-
-
-
-export default function Skills(){
+export default function Skills() {
   return (
     <section id="skills" className="py-12">
       <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <h2 className="text-2xl font-bold">Skills</h2>
-          <p className="text-muted mt-2">Technical Skills</p>
+          <h2 className="text-4xl font-bold text-center mb-2">Skills</h2>
+          <p className="text-2xl font-bold text-center mb-2">
+            Technical Skills
+          </p>
         </div>
       </div>
-      
+
       <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-        {categoryCards.map(card => (
+        {categoryCards.map((card) => (
           <div key={card.title} className="card-box p-5">
             <div className="font-semibold mb-3">{card.title}</div>
-            
 
             <div className="skills-container">
-  {card.items.map((item, index) => (
-    <div key={index} className="skill-card">
-      <div className="skill-icon">{item.icon}</div>
-      <p>{item.name}</p>
-    </div>
-  ))}
-</div>
-
+              {card.items.map((item, index) => (
+                <div key={index} className="skill-card">
+                  <div className="skill-icon">{item.icon}</div>
+                  <p>{item.name}</p>
+                </div>
+              ))}
+            </div>
           </div>
         ))}
       </div>
     </section>
-  )
+  );
 }

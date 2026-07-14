@@ -4,7 +4,7 @@ import Typewriter from "./Typewriter";
 
 export default function Hero() {
   return (
-    <section id="home" className="pt-16 pb-12 animated-bg">
+    <section id="home" className="pt-6 pb-10 animated-bg">
       <div className="grid gap-6 lg:grid-cols-2 items-center">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
@@ -12,9 +12,9 @@ export default function Hero() {
           transition={{ duration: 0.6 }}
         >
           <div className="max-w-2xl">
-            <div className="text-sm text-muted mb-4">
+            {/* <div className="text-sm text-muted mb-4">
               &gt; Aman Singh | Full Stack Developer (MERN)
-            </div>
+            </div> */}
             <h1 className="hero-title-large font-extrabold">
               Hi I'm <span className="text-primary">AMAN SINGH</span>
             </h1>
@@ -67,12 +67,12 @@ export default function Hero() {
                 Resume
               </a>
             </div>
-            <div className="mt-8 grid gap-3 sm:grid-cols-3">
-              <div className="card-box p-5">
+            <div className="mt-4 grid gap-3 sm:grid-cols-3">
+              <div className="card-box p-2">
                 <div className="text-sm text-muted">Location</div>
                 <div className="mt-2 font-semibold">Ghaziabad, India</div>
               </div>
-              <div className="card-box p-5">
+              <div className="card-box p-2">
                 <div className="text-sm text-muted">Role</div>
                 <div className="mt-2 font-semibold">
                   Full Stack MERN Developer
@@ -83,7 +83,7 @@ export default function Hero() {
                 </p>
               </div>
 
-              <div className="card-box p-5">
+              <div className="card-box p-2">
                 <div className="text-sm text-muted">Internship Experience</div>
                 <div className="mt-2 font-semibold">
                   Java Full Stack Development Virtual Intern
@@ -95,23 +95,15 @@ export default function Hero() {
                 </p>
               </div>
 
-              <div className="card-box p-5">
+              <div className="card-box p-2">
                 <div className="text-sm text-muted">Focus</div>
                 <div className="mt-2 font-semibold">
                   Full Stack Development, REST APIs, Data Structures &
                   Algorithms, Database Design
                 </div>
               </div>
-              <div className="card-box p-5">
-                <div className="text-sm text-muted">Featured Project</div>
-                <div className="mt-2 font-semibold">WanderNest</div>
-                <p className="text-sm text-muted mt-2">
-                  Built a full-stack travel and accommodation booking platform
-                  with authentication, CRUD operations, reviews, image uploads,
-                  and REST APIs using the MERN stack.
-                </p>
-              </div>
-              <div className="card-box p-5">
+              
+              <div className="card-box p-2">
                 <div className="text-sm text-muted">Tech Stack</div>
                 <div className="mt-2 font-semibold">MERN Stack</div>
                 <p className="text-sm text-muted mt-2">

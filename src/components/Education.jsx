@@ -27,7 +27,7 @@ const timeline = [
 export default function Education(){
   return (
     <section id="education" className="py-12">
-      <h2 className="text-2xl font-bold">Education</h2>
+      <h2 className="text-3xl font-bold  mb-2">Education</h2>
       <div className="mt-6 border-l-2 border-primary pl-6">
         {timeline.map((t, i)=> (
           <div key={i} className="mb-8 relative">

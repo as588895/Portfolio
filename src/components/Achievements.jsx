@@ -8,7 +8,7 @@ import { motion } from 'framer-motion'
 //   {label:'HackerRank 3 Star', value:1}
 // ]
 const counters = [
-  { label: 'DSA Problems Solved', value: '200+' },
+  { label: 'DSA Problems Solved', value: '225+' },
   { label: 'LeetCode Streak Badges', value: '50 Days & 100 Days' },
   { label: 'HackerRank Rating', value: '3⭐' }
 ]
@@ -38,7 +38,7 @@ function Counter({label, value}) {
 export default function Achievements(){
   return (
     <section id="achievements" className="py-12">
-      <h2 className="text-2xl font-bold">Achievements</h2>
+      <h2 className="text-3xl font-bold  mb-2">Achievements</h2> 
       <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
         {counters.map(c=> <Counter key={c.label} {...c} />)}
       </div>
