@@ -1,47 +1,162 @@
-import React from 'react'
+import {Swiper,SwiperSlide} from "swiper/react";
 
-// const certs = [
-//   {title:'Alpha DSA with Java', org:'Apna College', year:'2026'},
-//   {title:'Data Analytics Workshop', org:'Appwars Technologies', year:'March 2026'}
-// ]
-const certs = [
-  {
-    title: 'Alpha DSA with Java',
-    org: 'Apna College',
-    year: '2026',
-    link: 'https://www.linkedin.com/feed/update/urn:li:activity:7425159417022545920/'
-  },
-  {
-    title: 'Data Analytics Workshop',
-    org: 'Appwars Technologies',
-    year: 'March 2026',
-    link: 'https://www.linkedin.com/feed/update/urn:li:activity:7441030265612767232/'
-  },
-  {
-    title: 'Getting Started with Artificial Intelligence',
-    org: 'IBM SkillsBuild',
-    year: 'June 2026',
-    link: 'https://www.linkedin.com/feed/update/urn:li:activity:7470417042622541824/'
-  }
-]
+import {EffectCoverflow,Pagination,Navigation} from "swiper/modules";
+
+import {motion} from "framer-motion";
+
+import "swiper/css";
+
+import "swiper/css/effect-coverflow";
+
+import "swiper/css/navigation";
+
+import "swiper/css/pagination";
+
+import {certs} from "../data/certificates";
 
 export default function Certifications(){
-  return (
-    <section id="certifications" className="py-12">
-      <h2 className="text-2xl font-bold">Certifications</h2>
-      <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
-        {certs.map(c=> (
-          <div key={c.title} className="p-4 rounded-lg bg-white/60 dark:bg-gray-800/60 shadow">
-            <div className="font-semibold">{c.title}</div>
-            <div className="text-sm text-muted">{c.org} • {c.year}</div>
-            {c.link && (
-              <a href={c.link} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
-                View Certificate
-              </a>
-            )}
-          </div>
-        ))}
-      </div>
-    </section>
-  )
+
+return(
+
+<section id="certifications" className="py-24">
+
+<div className="max-w-7xl mx-auto">
+
+<h1 className="text-5xl font-bold text-center mb-16">
+Certificates
+</h1>
+
+<Swiper
+
+effect={"coverflow"}
+
+grabCursor={true}
+
+centeredSlides={true}
+
+slidesPerView={"auto"}
+
+loop={true}
+
+navigation
+
+pagination={{clickable:true}}
+
+coverflowEffect={{
+rotate:0,
+stretch:0,
+depth:250,
+modifier:2,
+slideShadows:true,
+scale:0.9
+}}
+
+modules={[EffectCoverflow,Pagination,Navigation]}
+
+>
+
+{
+
+certs.map((c,index)=>(
+
+<SwiperSlide
+
+key={index}
+
+className="max-w-md"
+
+>
+
+<motion.div
+
+whileHover={{scale:1.03}}
+
+className="rounded-3xl overflow-hidden bg-[#0F172A] shadow-2xl"
+
+>
+
+<img
+
+src={c.image}
+
+className="h-80 w-full object-cover"
+
+/>
+
+<div className="p-6">
+
+<p className="uppercase text-orange-400 text-sm">
+
+{c.org}
+
+</p>
+
+<h2 className="text-white text-3xl font-bold mt-2">
+
+{c.title}
+
+</h2>
+
+<p className="text-gray-400 mt-2">
+
+{c.year}
+
+</p>
+
+<div className="flex flex-wrap gap-2 mt-5">
+
+{
+
+c.tags.map(tag=>(
+
+<span
+
+key={tag}
+
+className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-xs"
+
+>
+
+{tag}
+
+</span>
+
+))
+
+}
+
+</div>
+
+<a
+
+href={c.link}
+
+target="_blank"
+
+className="inline-block mt-6 bg-orange-500 hover:bg-orange-600 text-white px-5 py-2 rounded-xl"
+
+>
+
+View Certificate
+
+</a>
+
+</div>
+
+</motion.div>
+
+</SwiperSlide>
+
+))
+
+}
+
+</Swiper>
+
+</div>
+
+</section>
+
+)
+
 }
