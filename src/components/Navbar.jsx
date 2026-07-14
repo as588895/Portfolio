@@ -12,6 +12,7 @@ export default function Navbar(){
           <a href="#about" className="cursor-pointer" onClick={(e)=>{e.preventDefault(); document.getElementById('about')?.scrollIntoView({behavior:'smooth'})}}>About</a>
           <a href="#skills" className="cursor-pointer" onClick={(e)=>{e.preventDefault(); document.getElementById('skills')?.scrollIntoView({behavior:'smooth'})}}>Skills</a>
           <a href="#projects" className="cursor-pointer" onClick={(e)=>{e.preventDefault(); document.getElementById('projects')?.scrollIntoView({behavior:'smooth'})}}>Projects</a>
+          <a href="#certifications" className="cursor-pointer" onClick={(e)=>{e.preventDefault(); document.getElementById('certifications')?.scrollIntoView({behavior:'smooth'})}}>Certifications</a>
           <a href="#contact" className="cursor-pointer" onClick={(e)=>{e.preventDefault(); document.getElementById('contact')?.scrollIntoView({behavior:'smooth'})}}>Contact</a>
           <ThemeToggle />
         </nav>
