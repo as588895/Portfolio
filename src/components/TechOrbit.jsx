@@ -1,17 +1,9 @@
 import React, { useMemo } from "react";
 import { motion } from "framer-motion";
 
-import {
-  FaReact,
-  FaNodeJs,
-  FaGitAlt,
-} from "react-icons/fa";
+import { FaReact, FaNodeJs, FaGitAlt } from "react-icons/fa";
 
-import {
-  SiExpress,
-  SiJavascript,
-  SiMongodb,
-} from "react-icons/si";
+import { SiExpress, SiJavascript, SiMongodb } from "react-icons/si";
 
 import "./TechOrbit.css";
 
@@ -33,7 +25,7 @@ const techs = [
   },
   {
     name: "Express",
-    icon: <SiExpress size={34} color="#ffffff" />,
+    icon: <SiExpress size={34} color="#83A7DB" />,
     angle: 0,
   },
   {
@@ -49,7 +41,6 @@ const techs = [
 ];
 
 export default function TechOrbit() {
-
   const particles = useMemo(() => {
     return [...Array(30)].map((_, i) => ({
       id: i,
@@ -74,7 +65,6 @@ export default function TechOrbit() {
         stiffness: 120,
       }}
     >
-
       <div className="orbit-glow"></div>
 
       <div className="particles">
@@ -102,16 +92,8 @@ export default function TechOrbit() {
         ))}
       </div>
 
-      <svg
-        className="orbit-ring"
-        width="520"
-        height="520"
-      >
-        <circle
-          cx="260"
-          cy="260"
-          r="190"
-        />
+      <svg className="orbit-ring" width="520" height="520">
+        <circle cx="260" cy="260" r="190" />
       </svg>
 
       <motion.div
@@ -125,109 +107,67 @@ export default function TechOrbit() {
           ease: "linear",
         }}
       >
-                {techs.map((tech) => {
-
-          let animation = {};
-
-          if (tech.name === "React") {
-            animation = {
-              rotate: 360,
-              transition: {
-                repeat: Infinity,
-                duration: 3,
-                ease: "linear",
-              },
-            };
-          }
-
-          else if (tech.name === "MongoDB") {
-            animation = {
-              scale: [1, 1.15, 1],
-              boxShadow: [
-                "0 0 10px #13AA52",
-                "0 0 30px #13AA52",
-                "0 0 10px #13AA52",
-              ],
-              transition: {
-                repeat: Infinity,
-                duration: 2,
-              },
-            };
-          }
-
-          else if (tech.name === "Node.js") {
-            animation = {
-              scale: [1, 1.08, 1],
-              boxShadow: [
-                "0 0 10px #68A063",
-                "0 0 35px #68A063",
-                "0 0 10px #68A063",
-              ],
-              transition: {
-                repeat: Infinity,
-                duration: 2,
-              },
-            };
-          }
-
-          else if (tech.name === "JavaScript") {
-            animation = {
-              y: [0, -10, 0],
-              transition: {
-                repeat: Infinity,
-                duration: 1.5,
-              },
-            };
-          }
-
-          else if (tech.name === "Git") {
-            animation = {
-              rotate: [-8, 8, -8],
-              transition: {
-                repeat: Infinity,
-                duration: 1.2,
-              },
-            };
-          }
-
+        {techs.map((tech) => {
           return (
-
             <motion.div
               key={tech.name}
               className="orbit-item"
               style={{
-                transform: `rotate(${tech.angle}deg) translate(230px) rotate(-${tech.angle}deg)`
+                transform: `rotate(${tech.angle}deg) translate(230px) rotate(-${tech.angle}deg)`,
               }}
             >
-
               <motion.div
                 className="icon-circle"
-                animate={animation}
                 whileHover={{
                   scale: 1.25,
                 }}
               >
-
-                <div className="icon">
+                <motion.div
+                  className="icon"
+                  animate={
+                    tech.name === "React"
+                      ? { rotate: 360 }
+                      : tech.name === "MongoDB"
+                        ? {
+                            scale: [1, 1.25, 1],
+                          }
+                        : tech.name === "Node.js"
+                          ? {
+                              scale: [1, 1.12, 1],
+                            }
+                          : tech.name === "JavaScript"
+                            ? {
+                                y: [0, -8, 0],
+                              }
+                            : tech.name === "Git"
+                              ? {
+                                  rotate: [-12, 12, -12],
+                                }
+                              : tech.name === "Express"
+                                ? {
+                                    scale: [1, 1.15, 1],
+                                  }
+                                : {}
+                  }
+                  transition={{
+                    repeat: Infinity,
+                    duration: 2,
+                    ease: "easeInOut",
+                  }}
+                >
                   {tech.icon}
-                </div>
+                </motion.div>
 
                 <p>{tech.name}</p>
-
               </motion.div>
-
             </motion.div>
-
           );
-
         })}
-
       </motion.div>
 
       {/* Fixed Center */}
 
       <div className="center-circle">
-
         <motion.div
           className="center-content"
           animate={{
@@ -238,21 +178,13 @@ export default function TechOrbit() {
             duration: 2,
           }}
         >
-
           <h2>Full Stack</h2>
 
           <h3>Developer (MERN)</h3>
 
-          <span>
-            Building Scalable Applications
-          </span>
-
+          <span>Building Scalable Applications</span>
         </motion.div>
-
       </div>
-
     </motion.div>
-
   );
-
 }
