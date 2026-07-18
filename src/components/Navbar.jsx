@@ -6,7 +6,7 @@ export default function Navbar(){
   return (
     <header className="sticky top-0 z-50 bg-white/60 dark:bg-secondary/60 backdrop-blur-md">
       <div className="container mx-auto px-6 py-3 flex items-center justify-between">
-        <div className="text-xl font-semibold text-primary">Aman Singh</div>
+        <div className="text-xl font-semibold text-primary">PORTFOLIO</div>
         <nav className="hidden md:flex gap-6 items-center">
           <a href="#home" className="cursor-pointer" onClick={(e)=>{e.preventDefault(); document.getElementById('home')?.scrollIntoView({behavior:'smooth'})}}>Home</a>
           <a href="#about" className="cursor-pointer" onClick={(e)=>{e.preventDefault(); document.getElementById('about')?.scrollIntoView({behavior:'smooth'})}}>About</a>
