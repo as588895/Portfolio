@@ -18,6 +18,20 @@ export const projects = [
   },
 
   {
+  title: "Full Stack Stock Trading Platform",
+  desc: "A Zerodha-inspired stock trading platform featuring a modern and responsive interface for exploring stocks, derivatives, mutual funds, bonds, and investment products. [Status-Currently Working]",
+  tech: [
+    "HTML5",
+    "CSS3",
+    "JavaScript",
+    "Bootstrap"
+  ],
+  status: "Currently Working",
+  repo: "https://github.com/as588895/Full-Stack-Stock-Trading-Platform",
+  image: "/stock-trading.png"
+},
+
+  {
     title: "Spotify Clone",
     desc: "Spotify-inspired music streaming web app with playback controls, playlists and responsive UI.",
     tech: [
