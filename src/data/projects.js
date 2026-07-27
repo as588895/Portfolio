@@ -37,16 +37,18 @@ export const projects = [
   image: "/stock-trading.png"
 },
 
-  {
-    title: "Spotify Clone",
-    desc: "Spotify-inspired music streaming web app with playback controls, playlists and responsive UI.",
-    tech: [
-      "HTML",
-      "CSS",
-      "JavaScript"
-    ],
-    live: "https://spotify-clone-theta-silk.vercel.app/",
-    repo: "https://github.com/as588895/Web-Technology-Program/tree/main/CSS/Project(CSS)",
-    image: "/spotify.png"
-  }
+ {
+  title: "WeatherPulse",
+  desc: "A modern React-based weather application that provides real-time weather updates, temperature, humidity, and weather conditions using the OpenWeather API with a responsive and user-friendly interface.",
+  tech: [
+    "React.js",
+    "Vite",
+    "Material UI",
+    "OpenWeather API",
+    "CSS"
+  ],
+  live: "https://weatherpulse-g3l8.onrender.com/",
+  repo: "https://github.com/as588895/WeatherPulse",
+  image: "/weatherpulse.png"
+}
 ];
