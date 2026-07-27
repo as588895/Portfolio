@@ -17,17 +17,23 @@ export const projects = [
     image: "/wandernest.png"
   },
 
-  {
+ {
   title: "Full Stack Stock Trading Platform",
-  desc: "A Zerodha-inspired stock trading platform featuring a modern and responsive interface for exploring stocks, derivatives, mutual funds, bonds, and investment products. [Status-Currently Working]",
+  desc: "A full-stack Zerodha-inspired stock trading platform featuring secure authentication, an interactive dashboard, watchlist, portfolio management, and trading workflows. Built with the MERN stack and continuously enhanced with new features.",
   tech: [
-    "HTML5",
-    "CSS3",
-    "JavaScript",
-    "Bootstrap"
+    "React.js",
+    "Bootstrap",
+    "Node.js",
+    "Express.js",
+    "MongoDB Atlas",
+    "REST API",
+  "JWT Authentication",
+  "Axios",
+  "React Router"
   ],
-  status: "Currently Working",
+  status: "In Progress",
   repo: "https://github.com/as588895/Full-Stack-Stock-Trading-Platform",
+  live: "https://full-stack-stock-trading-platform-2-rouf.onrender.com/",
   image: "/stock-trading.png"
 },
 
