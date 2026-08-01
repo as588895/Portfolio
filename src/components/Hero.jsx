@@ -95,7 +95,7 @@ export default function Hero() {
                 </p>
               </div>
 
-              <div className="card-box p-2">
+              {/* <div className="card-box p-2">
                 <div className="text-sm text-muted">Focus</div>
                 <div className="mt-2 font-semibold">
                   Full Stack Development, REST APIs, Data Structures &
@@ -110,7 +110,7 @@ export default function Hero() {
                   MongoDB, Express.js, React.js, Node.js, JavaScript, Git,
                   GitHub, Postman
                 </p>
-              </div>
+              </div> */}
               
             </div>
           </div>
@@ -132,7 +132,7 @@ export default function Hero() {
               <img
                 src="/aman.png"
                 alt="Aman Singh profile"
-                className="w-85 h-85 rounded-full object-cover object-center shadow-lg"
+                className="w-65 h-65 rounded-full object-cover object-center shadow-lg"
               />
             </div>
           </div>

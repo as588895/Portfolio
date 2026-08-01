@@ -46,7 +46,7 @@ export default function About() {
             contribute to impactful projects, and grow as a Software Developer.
           </p>
           <div className="mt-6 grid gap-3 sm:grid-cols-2">
-            <div className="p-5 border border-solid border-slate-200 rounded-3xl bg-slate-50 dark:bg-slate-900 dark:border-slate-700">
+            <div className="p-5 card-box border border-solid border-slate-200 rounded-3xl bg-slate-50 dark:bg-slate-900 dark:border-slate-700">
               <h3 className="font-semibold">Core Foundations</h3>
               <ul className="mt-3 space-y-2 text-sm text-muted">
                 <li>• Data Structures & Algorithms</li>
@@ -56,7 +56,7 @@ export default function About() {
                 <li>• Computer Networks</li>
               </ul>
             </div>
-            <div className="p-5 border border-solid border-slate-200 rounded-3xl bg-slate-50 dark:bg-slate-900 dark:border-slate-700">
+            <div className="p-5 card-box border border-solid border-slate-200 rounded-3xl bg-slate-50 dark:bg-slate-900 dark:border-slate-700">
               <h3 className="font-semibold">What I value</h3>
               <ul className="mt-3 space-y-2 text-sm text-muted">
                 <li>• Clean, maintainable code</li>

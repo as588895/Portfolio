@@ -8,7 +8,7 @@ import { motion } from 'framer-motion'
 //   {label:'HackerRank 3 Star', value:1}
 // ]
 const counters = [
-  { label: 'DSA Problems Solved', value: '225+' },
+  { label: 'DSA Problems Solved', value: '240+' },
   { label: 'LeetCode Streak Badges', value: '50 Days & 100 Days' },
   { label: 'HackerRank Rating', value: '3⭐' }
 ]
