@@ -95,22 +95,7 @@ export default function Hero() {
                 </p>
               </div>
 
-              {/* <div className="card-box p-2">
-                <div className="text-sm text-muted">Focus</div>
-                <div className="mt-2 font-semibold">
-                  Full Stack Development, REST APIs, Data Structures &
-                  Algorithms, Database Design
-                </div>
-              </div>
               
-              <div className="card-box p-2">
-                <div className="text-sm text-muted">Tech Stack</div>
-                <div className="mt-2 font-semibold">MERN Stack</div>
-                <p className="text-sm text-muted mt-2">
-                  MongoDB, Express.js, React.js, Node.js, JavaScript, Git,
-                  GitHub, Postman
-                </p>
-              </div> */}
               
             </div>
           </div>
