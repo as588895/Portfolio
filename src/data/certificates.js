@@ -47,7 +47,7 @@ link:"https://www.linkedin.com/feed/update/urn:li:activity:7441030265612767232/"
 },
 
 {
-title:"Introduction to Cybersecurity",
+title:"Introduction to CyberSecurity",
 org:"Cisco",
 year:"Jul 2026",
 image:cisco,
