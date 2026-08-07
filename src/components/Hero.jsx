@@ -15,7 +15,7 @@ export default function Hero() {
             {/* <div className="text-sm text-muted mb-4">
               &gt; Aman Singh | Full Stack Developer (MERN)
             </div> */}
-            <h1 className="hero-title-large font-extrabold">
+            <h1 className="-mt-12 hero-title-large font-extrabold">
               Hi I'm <span className="text-primary">AMAN SINGH</span>
             </h1>
             <p className="mt-5 text-2xl leading-tight text-secondary dark:text-white max-w-2xl">
@@ -85,18 +85,33 @@ export default function Hero() {
 
               <div className="card-box p-2">
                 <div className="text-sm text-muted">Internship Experience</div>
+                {/* <div className="mt-2 font-semibold">
+                  MERN Full Stack Development Virtual Intern (Eduskills) <br /><br />
+                  Java Full Stack Development Virtual Intern (Eduskills)
+                </div> */}
                 <div className="mt-2 font-semibold">
-                  Java Full Stack Development Virtual Intern
-                </div>
-                <p className="text-sm text-muted mt-2">
-                  Built responsive web applications, developed REST APIs,
-                  integrated databases, and worked on real-world full-stack
-                  projects.
-                </p>
-              </div>
+                  <a
+                    href="https://www.linkedin.com/feed/update/urn:li:activity:7490063595481747457/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-400 hover:text-blue-300 hover:underline"
+                  >
+                    MERN Full Stack Development Virtual Intern (Eduskills)
+                  </a>
 
-              
-              
+                  <br />
+                  <br />
+
+                  <a
+                    href="https://www.linkedin.com/posts/aman-singh-222364298_java-fullstackdevelopment-javadeveloper-activity-7471472608702640128-R8Kp?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEf0pjoBIgQFE6jSIyztPAjAHCDglcC3DCA"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-400 hover:text-blue-300 hover:underline"
+                  >
+                    Java Full Stack Development Virtual Intern (Eduskills)
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </motion.div>
