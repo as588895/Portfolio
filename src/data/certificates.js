@@ -1,6 +1,7 @@
 import alpha from "../assets/certificates/alpha.jpg";
 import analytics from "../assets/certificates/appwars.jpg";
 import java from "../assets/certificates/java.jpg";
+import mern from "../assets/certificates/mern.jpg";
 import cisco from "../assets/certificates/cisco.jpg";
 import ai from "../assets/certificates/ibm-ai.jpg";
 import aiFund from "../assets/certificates/ai-fundamental.jpg";
@@ -19,12 +20,21 @@ link:"https://www.linkedin.com/feed/update/urn:li:activity:7425159417022545920/"
 },
 
 {
-title:"Java Full Stack Development",
+title:"Java Full Stack Development With Project",
 org:"EduSkills",
 year:"Apr-Jun 2026",
 image:java,
 tags:["Java","Spring","Full Stack"],
 link:"https://www.linkedin.com/posts/aman-singh-222364298_java-fullstackdevelopment-javadeveloper-activity-7471472608702640128-R8Kp?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEf0pjoBIgQFE6jSIyztPAjAHCDglcC3DCA"
+},
+
+{
+  title: "MERN Full Stack Development With Project",
+  org: "EduSkills",
+  year: "Jun-Aug 2026",
+  image: mern,
+  tags: ["MongoDB", "Express.js", "React.js", "Node.js", "Full Stack"],
+  link: "https://www.linkedin.com/feed/update/urn:li:activity:7490063595481747457/"
 },
 
 {
