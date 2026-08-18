@@ -92,9 +92,13 @@ export default function TechOrbit() {
         ))}
       </div>
 
-      <svg className="orbit-ring" width="520" height="520">
-        <circle cx="260" cy="260" r="190" />
-      </svg>
+      <svg
+  className="orbit-ring"
+  viewBox="0 0 520 520"
+  preserveAspectRatio="xMidYMid meet"
+>
+  <circle cx="260" cy="260" r="190" />
+</svg>
 
       <motion.div
         className="orbit"
@@ -112,9 +116,12 @@ export default function TechOrbit() {
             <motion.div
               key={tech.name}
               className="orbit-item"
+              // style={{
+              //   transform: `rotate(${tech.angle}deg) translate(230px) rotate(-${tech.angle}deg)`,
+              // }}
               style={{
-                transform: `rotate(${tech.angle}deg) translate(230px) rotate(-${tech.angle}deg)`,
-              }}
+  transform: `rotate(${tech.angle}deg) translate(var(--orbit-radius)) rotate(-${tech.angle}deg)`,
+}}
             >
               <motion.div
                 className="icon-circle"
