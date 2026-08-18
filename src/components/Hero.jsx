@@ -15,7 +15,7 @@ export default function Hero() {
             {/* <div className="text-sm text-muted mb-4">
               &gt; Aman Singh | Full Stack Developer (MERN)
             </div> */}
-            <h1 className="-mt-12 hero-title-large font-extrabold">
+            <h1 className="mt-2 sm:mt-0 lg:-mt-12 hero-title-large font-extrabold">
               Hi I'm <span className="text-primary">AMAN SINGH</span>
             </h1>
             <p className="mt-5 text-2xl leading-tight text-secondary dark:text-white max-w-2xl">
