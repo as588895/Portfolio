@@ -11,7 +11,11 @@ React.useEffect(() => {
     document.documentElement.classList.add('dark');
   } else {
     document.documentElement.classList.remove('dark');
-    if (!theme) localStorage.setItem('theme', 'light');
+    if (!theme) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+      setDark(true);
+    }
   }
 }, []);
 
@@ -30,7 +34,7 @@ React.useEffect(()=>{
       localStorage.setItem('theme','light')
     } else {
       document.documentElement.classList.add('dark')
-      localStorage.setItem('theme','dark')
+      localStorage.setItem('theme','dark') 
     }
   }
 

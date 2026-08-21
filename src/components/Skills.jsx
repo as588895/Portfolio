@@ -26,6 +26,7 @@ import {
 
 import { FaJava, FaPython } from "react-icons/fa";
 import { SiC } from "react-icons/si";
+import "./Skills.css";
 
 const categoryCards = [
   {
@@ -79,31 +80,47 @@ const categoryCards = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-12">
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+    <section id="skills" className="skills-section">
+      <div className="skills-heading">
         <div>
-          <h2 className="text-4xl font-bold text-center mb-2">Skills</h2>
-          <p className="text-2xl font-bold text-center mb-2">
-            Technical Skills
-          </p>
+          <span className="skills-eyebrow">Tools of the trade</span>
+          <h2>Technical Skills</h2>
+          <p>Technologies I use to turn ideas into reliable products.</p>
         </div>
+        <div className="skills-index">05 <span>/ STACK</span></div>
       </div>
 
-      <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-        {categoryCards.map((card) => (
-          <div key={card.title} className="card-box p-5">
-            <div className="font-semibold mb-3">{card.title}</div>
+      <div className="skills-layout">
+        <div className="skills-feature">
+          <div className="skills-feature__label">Full-stack toolkit</div>
+          <div className="skills-feature__code">&lt;/&gt;</div>
+          <h3>Build. Ship. Improve.</h3>
+          <p>
+            A practical stack across frontend, backend, databases and the tools
+            that keep development moving.
+          </p>
+          <div className="skills-feature__line" />
+          <span className="skills-feature__status"><i /> Available for projects</span>
+        </div>
 
-            <div className="skills-container">
-              {card.items.map((item, index) => (
-                <div key={index} className="skill-card">
-                  <div className="skill-icon">{item.icon}</div>
-                  <p>{item.name}</p>
-                </div>
-              ))}
+        <div className="skills-categories">
+          {categoryCards.map((card, categoryIndex) => (
+            <div key={card.title} className="skills-category">
+              <div className="skills-category__heading">
+                <span>0{categoryIndex + 1}</span>
+                <h3>{card.title}</h3>
+              </div>
+              <div className="skills-category__items">
+                {card.items.map((item, index) => (
+                  <div key={`${card.title}-${index}`} className="skills-tile">
+                    <span className="skills-tile__icon">{item.icon}</span>
+                    <span>{item.name}</span>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

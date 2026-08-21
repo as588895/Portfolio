@@ -1,6 +1,7 @@
 import React from 'react'
-import { FiMail, FiPhone, FiGithub, FiLinkedin } from 'react-icons/fi'
+import { FiMail, FiPhone, FiGithub, FiLinkedin, FiArrowUp } from 'react-icons/fi'
 import emailjs from '@emailjs/browser'
+import './Contact.css'
 
 export default function Contact(){
   const formRef = React.useRef(null)
@@ -20,47 +21,42 @@ export default function Contact(){
   }
 
   return (
-    <section id="contact" className="py-12">
-      <h2 className="text-2xl font-bold">Let's Connect</h2>
-      <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
-        <div>
-          <p className="text-muted">I'm currently looking for SDE internships and full-stack developer roles. Whether you have a question or just want to say hi, my inbox is always open.</p>
-          <div className="mt-6 space-y-4">
-            <div className="rounded-3xl border border-slate-200 dark:border-slate-700 p-5 bg-slate-50 dark:bg-slate-900">
-              <div className="flex items-center gap-3 text-secondary dark:text-white font-semibold"><FiPhone /> Phone</div>
-              <div className="text-sm text-muted mt-2">+91-9260938583</div>
-            </div>
-            <div className="rounded-3xl border border-slate-200 dark:border-slate-700 p-5 bg-slate-50 dark:bg-slate-900">
-              <div className="flex items-center gap-3 text-secondary dark:text-white font-semibold"><FiMail /> Email</div>
-              <div className="text-sm text-muted mt-2">as588895@gmail.com</div>
-            </div>
-            <div className="flex gap-3 mt-3">
-              <a href="https://github.com/" className="btn-primary inline-flex items-center gap-2"><FiGithub /> GitHub</a>
-              <a href="https://linkedin.com/in/aman-singh-222364298/" className="btn-primary inline-flex items-center gap-2"><FiLinkedin /> LinkedIn</a>
-            </div>
+    <section id="contact" className="contact-section">
+      <div className="contact-heading">
+        <span>06 / CONNECTION</span>
+        <h2>Let&apos;s build something<br /><em>worth shipping.</em></h2>
+      </div>
+      <div className="contact-layout">
+        <div className="contact-intro">
+          <p>I&apos;m currently open to SDE internships and full-stack opportunities. Have a project, question, or idea? My inbox is open.</p>
+          <div className="contact-availability"><i /> Currently available for work</div>
+          <div className="contact-details">
+            <a href="tel:+919260938583"><FiPhone /><span>Phone<strong>+91 92609 38583</strong></span></a>
+            <a href="mailto:as588895@gmail.com"><FiMail /><span>Email<strong>as588895@gmail.com</strong></span></a>
+          </div>
+          <div className="contact-socials">
+            <a href="https://github.com/as588895" target="_blank" rel="noreferrer"><FiGithub /> GitHub</a>
+            <a href="https://linkedin.com/in/aman-singh-222364298/" target="_blank" rel="noreferrer"><FiLinkedin /> LinkedIn</a>
           </div>
         </div>
-        <form ref={formRef} onSubmit={sendEmail} className="contact-card">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-            {/* <input name="name" required placeholder="Name" className="w-full p-3 rounded border border-slate-300 bg-slate-50 dark:border-slate-700 dark:bg-slate-950" /> */}
-            <input type="text" name="from_name" required placeholder="Your Name" className="w-full p-3 rounded border border-slate-300 bg-slate-50 dark:border-slate-700 dark:bg-slate-950" />
-            {/* <input name="email" type="email" required placeholder="Email" className="w-full p-3 rounded border border-slate-300 bg-slate-50 dark:border-slate-700 dark:bg-slate-950" />
-          </div> */}
-          <input type="email" name="from_email" required placeholder="Your Email" className="w-full p-3 rounded border border-slate-300 bg-slate-50 dark:border-slate-700 dark:bg-slate-950" />
-          </div>
-          <input name="subject" placeholder="Subject" className="w-full p-3 rounded border border-slate-300 bg-slate-50 dark:border-slate-700 dark:bg-slate-950 mt-3" />
-          <textarea name="message" placeholder="Your Message" className="w-full p-3 rounded border border-slate-300 bg-slate-50 dark:border-slate-700 dark:bg-slate-950 h-40 mt-3" />
-          <button type="submit" className="w-full btn-primary mt-3">Send Message</button>
-          {/* <div className="text-sm text-muted mt-2">{status === 'sending' ? 'Sending...' : status === 'sent' ? 'Message sent — thank you!' : status === 'error' ? 'Failed to send.' : ''}</div> */}
-
-        <p>
-           {status === 'sending' && 'Sending...'}
-           {status === 'sent' && 'Message sent — thank you!'}
-           {status === 'error' && 'Failed to send.'}
-        </p>
-
+        <form ref={formRef} onSubmit={sendEmail} className="contact-form">
+          <div className="contact-form__topline"><span>Send a message</span><span>01</span></div>
+          <label>Your name<input type="text" name="from_name" required placeholder="Aman, let's talk..." /></label>
+          <label>Email address<input type="email" name="from_email" required placeholder="you@example.com" /></label>
+          <label>Subject<input name="subject" placeholder="What can I help with?" /></label>
+          <label>Message<textarea name="message" required placeholder="Tell me a little about your idea..." /></label>
+          <button type="submit" className="contact-submit">{status === 'sending' ? 'Sending...' : 'Send message →'}</button>
+          <p className="contact-status">{status === 'sent' && 'Message sent — thank you!'}{status === 'error' && 'Failed to send. Please try again.'}</p>
         </form>
       </div>
+      <button
+        type="button"
+        className="contact-back-top"
+        onClick={() => document.querySelector('#home')?.scrollIntoView({ behavior: 'smooth' })}
+      >
+        <span>Back to top</span>
+        <FiArrowUp aria-hidden="true" />
+      </button>
     </section>
   )
 }

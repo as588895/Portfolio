@@ -1,25 +1,76 @@
-import React from 'react'
-// use native smooth scroll
-import ThemeToggle from './ThemeToggle'
+import { useState } from "react";
+import {
+  FiAward,
+  FiBookOpen,
+  FiBriefcase,
+  FiCode,
+  FiHome,
+  FiMail,
+  FiMenu,
+  FiUser,
+  FiX,
+} from "react-icons/fi";
+import ThemeToggle from "./ThemeToggle";
+import "./Navbar.css";
 
-export default function Navbar(){
+const links = [
+  { label: "Home", href: "#home", icon: FiHome },
+  { label: "About", href: "#about", icon: FiUser },
+  { label: "Skills", href: "#skills", icon: FiCode },
+  { label: "Projects", href: "#projects", icon: FiBriefcase },
+  { label: "Certifications", href: "#certifications", icon: FiAward },
+  { label: "Contact", href: "#contact", icon: FiMail },
+];
+
+export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const navigateTo = (event, href) => {
+    event.preventDefault();
+    document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+    setMenuOpen(false);
+  };
+
   return (
-    <header className="sticky top-0 z-50 bg-white/60 dark:bg-secondary/60 backdrop-blur-md">
-      <div className="container mx-auto px-6 py-3 flex items-center justify-between">
-        <div className="text-xl font-semibold text-primary">PORTFOLIO</div>
-        <nav className="hidden md:flex gap-6 items-center">
-          <a href="#home" className="cursor-pointer" onClick={(e)=>{e.preventDefault(); document.getElementById('home')?.scrollIntoView({behavior:'smooth'})}}>Home</a>
-          <a href="#about" className="cursor-pointer" onClick={(e)=>{e.preventDefault(); document.getElementById('about')?.scrollIntoView({behavior:'smooth'})}}>About</a>
-          <a href="#skills" className="cursor-pointer" onClick={(e)=>{e.preventDefault(); document.getElementById('skills')?.scrollIntoView({behavior:'smooth'})}}>Skills</a>
-          <a href="#projects" className="cursor-pointer" onClick={(e)=>{e.preventDefault(); document.getElementById('projects')?.scrollIntoView({behavior:'smooth'})}}>Projects</a>
-          <a href="#certifications" className="cursor-pointer" onClick={(e)=>{e.preventDefault(); document.getElementById('certifications')?.scrollIntoView({behavior:'smooth'})}}>Certifications</a>
-          <a href="#contact" className="cursor-pointer" onClick={(e)=>{e.preventDefault(); document.getElementById('contact')?.scrollIntoView({behavior:'smooth'})}}>Contact</a>
+    <header className="site-navbar">
+      <div className="navbar-inner">
+        <a href="#home" className="navbar-brand" onClick={(event) => navigateTo(event, "#home")}>
+          <span className="navbar-brand__mark">A</span>
+          <span className="navbar-brand__name">AMAN SINGH</span>
+        </a>
+
+        <nav className="navbar-links" aria-label="Main navigation">
+          {links.map(({ label, href, icon: Icon }) => (
+            <a key={href} href={href} onClick={(event) => navigateTo(event, href)}>
+              <Icon aria-hidden="true" />
+              <span>{label}</span>
+            </a>
+          ))}
           <ThemeToggle />
         </nav>
-        <div className="md:hidden">
+
+        <div className="navbar-mobile-actions">
           <ThemeToggle />
+          <button
+            type="button"
+            className="navbar-menu-button"
+            aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={menuOpen}
+            onClick={() => setMenuOpen((open) => !open)}
+          >
+            {menuOpen ? <FiX aria-hidden="true" /> : <FiMenu aria-hidden="true" />}
+          </button>
         </div>
       </div>
+
+      <nav className={`navbar-mobile-menu ${menuOpen ? "is-open" : ""}`} aria-label="Mobile navigation">
+        {links.map(({ label, href, icon: Icon }) => (
+          <a key={href} href={href} onClick={(event) => navigateTo(event, href)}>
+            <Icon aria-hidden="true" />
+            <span>{label}</span>
+          </a>
+        ))}
+      </nav>
     </header>
-  )
+  );
 }

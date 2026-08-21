@@ -10,15 +10,36 @@ import Certifications from './components/Certifications'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import ScrollProgress from './components/ScrollProgress'
-import BackToTop from './components/BackToTop'
 import Loading from './components/Loading'
 
 export default function App(){
   const [loading, setLoading] = React.useState(true)
+  const pageRef = React.useRef(null)
+
+  React.useEffect(() => {
+    const page = pageRef.current
+    if (!page) return undefined
+
+    let frameId = 0
+    const handlePointerMove = (event) => {
+      cancelAnimationFrame(frameId)
+      frameId = requestAnimationFrame(() => {
+        page.style.setProperty('--page-mouse-x', `${event.clientX}px`)
+        page.style.setProperty('--page-mouse-y', `${event.clientY}px`)
+      })
+    }
+
+    page.addEventListener('pointermove', handlePointerMove)
+    return () => {
+      cancelAnimationFrame(frameId)
+      page.removeEventListener('pointermove', handlePointerMove)
+    }
+  }, [])
   React.useEffect(()=>{const t = setTimeout(()=>setLoading(false), 700); return ()=>clearTimeout(t)},[])
 
   return (
-    <div className="min-h-screen bg-white dark:bg-secondary text-secondary dark:text-white transition-colors duration-300">
+    <div ref={pageRef} className="site-shell min-h-screen bg-white dark:bg-secondary text-secondary dark:text-white transition-colors duration-300">
+      <div className="page-cursor-glow" aria-hidden="true" />
       <ScrollProgress />
       {loading ? <Loading /> : null}
       <Navbar />
@@ -47,7 +68,6 @@ export default function App(){
   </div>
 </main>
       <Footer />
-      <BackToTop />
     </div>
   )
 }

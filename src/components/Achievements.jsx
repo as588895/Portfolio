@@ -1,47 +1,37 @@
-import React from 'react'
-import { motion } from 'framer-motion'
+import "./Achievements.css";
 
-// const counters = [
-//   {label:'DSA Problems Solved', value:200},
-//   {label:'LeetCode 50 Days', value:1},
-//   {label:'LeetCode 100 Days', value:1},
-//   {label:'HackerRank 3 Star', value:1}
-// ]
 const counters = [
-  { label: 'DSA Problems Solved', value: '240+' },
-  { label: 'LeetCode Streak Badges', value: '50 Days & 100 Days' },
-  { label: 'HackerRank Rating', value: '3⭐' }
-]
+  { label: "DSA Problems Solved", value: "250+" },
+  { label: "LeetCode Streak Badges", value: "50 / 100 Days" },
+  { label: "HackerRank Rating", value: "3 Star" },
+];
 
-function Counter({label, value}) {
-  const [v, setV] = React.useState(0)
-  React.useEffect(()=>{
-    let start = 0; const dur = 1200; const step = Math.ceil(value / (dur/30))
-    const id = setInterval(()=>{
-      start += step; if(start >= value){ setV(value); clearInterval(id) } else setV(start)
-    },30)
-    return ()=>clearInterval(id)
-  },[value])
-
+function Counter({ label, value, index }) {
   return (
-    // <div className="p-4 rounded-lg bg-white/60 dark:bg-gray-800/60 text-center shadow">
-    //   <div className="text-3xl font-bold text-primary">{v}</div>
-    //   <div className="text-sm mt-2">{label}</div>
-    // </div>
-    <div className="p-4 rounded-lg bg-white/60 dark:bg-gray-800/60 text-center shadow">
-      <div className="text-3xl font-bold text-primary">{value}</div>
-      <div className="text-sm mt-2">{label}</div>
-    </div>
-  )
+    <article className="achievement-card">
+      <div className="achievement-card__topline"><span>0{index + 1}</span><i /></div>
+      <div className="achievement-card__value">{value}</div>
+      <div className="achievement-card__label">{label}</div>
+      <div className="achievement-card__bar" />
+    </article>
+  );
 }
 
-export default function Achievements(){
+export default function Achievements() {
   return (
-    <section id="achievements" className="py-12">
-      <h2 className="text-3xl font-bold  mb-2">Achievements</h2> 
-      <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-        {counters.map(c=> <Counter key={c.label} {...c} />)}
+    <section id="achievements" className="achievements-section">
+      <div className="achievements-heading">
+        <div>
+          <span>04 / PROGRESS</span>
+          <h2>Proof of <em>practice.</em></h2>
+        </div>
+        <p>Small, consistent progress adds up to stronger engineering.</p>
+      </div>
+      <div className="achievements-grid">
+        {counters.map((counter, index) => (
+          <Counter key={counter.label} index={index} {...counter} />
+        ))}
       </div>
     </section>
-  )
+  );
 }

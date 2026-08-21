@@ -27,10 +27,10 @@
   left: 50%;
   width: min(440px, 38vw);
   overflow: hidden;
-  border: 1px solid rgba(15, 23, 42, 0.08);
+  border: 1px solid rgba(68, 64, 60, 0.14);
   border-radius: 24px;
-  background: #fff;
-  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.2);
+  background: var(--surface);
+  box-shadow: 0 24px 60px rgba(68, 64, 60, 0.14);
   cursor: pointer;
   transform-origin: center center;
   transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1), filter 0.9s ease, opacity 0.9s ease, box-shadow 0.9s ease;
@@ -41,7 +41,7 @@
   transform: translateX(-50%) translateY(0) rotate(0deg) scale(1);
   filter: none;
   opacity: 1;
-  box-shadow: 0 28px 70px rgba(234, 88, 12, 0.22);
+  box-shadow: 0 28px 70px rgba(201, 106, 70, 0.2);
 }
 
 .project-card.is-left {
@@ -85,7 +85,7 @@
 }
 
 .project-card:hover {
-  box-shadow: 0 32px 82px rgba(234, 88, 12, 0.3);
+  box-shadow: 0 32px 82px rgba(201, 106, 70, 0.28);
 }
 
 .project-card__image {
@@ -102,7 +102,7 @@
 .project-card__body {
   min-height: 180px;
   padding: 1rem 1.15rem 1.1rem;
-  color: #172033;
+  color: var(--secondary);
 }
 
 .project-card__title {
@@ -114,7 +114,7 @@
 
 .project-card__category {
   margin: 0.55rem 0 0;
-  color: #64748b;
+  color: var(--muted);
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -125,7 +125,7 @@
   display: -webkit-box;
   margin: 0.8rem 0 0;
   overflow: hidden;
-  color: #64748b;
+  color: var(--muted);
   font-size: 0.82rem;
   line-height: 1.5;
   -webkit-box-orient: vertical;
@@ -142,8 +142,8 @@
 .project-card__tech span {
   padding: 0.25rem 0.5rem;
   border-radius: 999px;
-  background: #f1f5f9;
-  color: #475569;
+  background: rgba(231, 161, 126, 0.12);
+  color: var(--muted);
   font-size: 0.62rem;
   font-weight: 600;
 }
@@ -169,16 +169,16 @@
 }
 
 .project-card__link--primary {
-  color: #ea580c;
+  color: var(--primary);
 }
 
 .project-card__link--secondary {
-  color: #64748b;
+  color: var(--muted);
 }
 
 .certification-card__image {
   padding: 0.7rem;
-  background: #f8fafc;
+  background: rgba(245, 243, 238, 0.8);
   object-fit: contain;
 }
 
@@ -225,10 +225,10 @@
 }
 
 .project-selector button {
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border);
   border-radius: 999px;
-  background: #fff;
-  color: #64748b;
+  background: var(--surface);
+  color: var(--muted);
   cursor: pointer;
   font-size: 0.7rem;
   font-weight: 700;
@@ -238,8 +238,8 @@
 
 .project-selector button:hover,
 .project-selector button.is-selected {
-  border-color: #ea580c;
-  background: #ea580c;
+  border-color: var(--primary);
+  background: var(--primary);
   color: #fff;
 }
 
