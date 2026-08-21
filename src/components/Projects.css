@@ -1,0 +1,332 @@
+.projects-section {
+  overflow: hidden;
+  padding: 3.75rem 0 4.5rem;
+}
+
+.projects-heading {
+  margin: 0;
+}
+
+.projects-intro {
+  max-width: 760px;
+  margin: 0.75rem auto 1.75rem;
+  line-height: 1.5;
+}
+
+.project-stage {
+  position: relative;
+  width: min(1200px, 100%);
+  height: 475px;
+  margin: 0 auto;
+  perspective: 1400px;
+}
+
+.project-card {
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  width: min(440px, 38vw);
+  overflow: hidden;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.2);
+  cursor: pointer;
+  transform-origin: center center;
+  transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1), filter 0.9s ease, opacity 0.9s ease, box-shadow 0.9s ease;
+}
+
+.project-card.is-active {
+  z-index: 3;
+  transform: translateX(-50%) translateY(0) rotate(0deg) scale(1);
+  filter: none;
+  opacity: 1;
+  box-shadow: 0 28px 70px rgba(234, 88, 12, 0.22);
+}
+
+.project-card.is-left {
+  z-index: 1;
+  transform: translateX(-105%) translateY(3.25rem) rotate(-7deg) scale(0.9);
+  filter: blur(2px);
+  opacity: 0.74;
+}
+
+.project-card.is-right {
+  z-index: 1;
+  transform: translateX(5%) translateY(3.25rem) rotate(7deg) scale(0.9);
+  filter: blur(2px);
+  opacity: 0.74;
+}
+
+.project-card.is-hidden {
+  z-index: 0;
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateX(-50%) scale(0.8);
+}
+
+.certification-card.is-background {
+  z-index: 1;
+  transform: translateX(calc(-50% + var(--cert-x))) translateY(var(--cert-y)) rotate(var(--cert-angle)) scale(0.5);
+  filter: blur(7px);
+  opacity: 0.28;
+}
+
+.certification-card.is-background:hover {
+  z-index: 5;
+  transform: translateX(calc(-50% + var(--cert-x))) translateY(calc(var(--cert-y) - 18px)) rotate(var(--cert-angle)) scale(0.62);
+  filter: blur(0);
+  opacity: 1;
+}
+
+.certification-card.is-active:hover {
+  transform: translateX(-50%) translateY(-14px) rotate(0deg) scale(1.02);
+}
+
+.project-card:hover {
+  box-shadow: 0 32px 82px rgba(234, 88, 12, 0.3);
+}
+
+.project-card__image {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.project-card:hover .project-card__image {
+  transform: scale(1.04);
+}
+
+.project-card__body {
+  min-height: 180px;
+  padding: 1rem 1.15rem 1.1rem;
+  color: #172033;
+}
+
+.project-card__title {
+  margin: 0;
+  font-size: clamp(1.15rem, 1.7vw, 1.55rem);
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+.project-card__category {
+  margin: 0.55rem 0 0;
+  color: #64748b;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.project-card__description {
+  display: -webkit-box;
+  margin: 0.8rem 0 0;
+  overflow: hidden;
+  color: #64748b;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.project-card__tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.65rem;
+}
+
+.project-card__tech span {
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  background: #f1f5f9;
+  color: #475569;
+  font-size: 0.62rem;
+  font-weight: 600;
+}
+
+.project-card__actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: 0.8rem;
+}
+
+.project-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.project-card__link:hover {
+  transform: translateX(3px);
+}
+
+.project-card__link--primary {
+  color: #ea580c;
+}
+
+.project-card__link--secondary {
+  color: #64748b;
+}
+
+.certification-card__image {
+  padding: 0.7rem;
+  background: #f8fafc;
+  object-fit: contain;
+}
+
+.certification-card .project-card__body {
+  min-height: 180px;
+}
+
+.certification-card__year {
+  margin: 0.35rem 0 0;
+  color: #94a3b8;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.certification-section .project-selector {
+  max-width: 760px;
+  flex-wrap: wrap;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.certification-section {
+  padding-top: 2.75rem;
+  padding-bottom: 3.25rem;
+}
+
+.certification-section .projects-intro {
+  margin-bottom: 0.9rem;
+}
+
+.certification-section .project-stage {
+  height: 445px;
+}
+
+.certification-section .project-card {
+  top: 0.75rem;
+}
+
+.project-selector {
+  display: flex;
+  justify-content: center;
+  gap: 0.55rem;
+  margin-top: -0.5rem;
+}
+
+.project-selector button {
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  background: #fff;
+  color: #64748b;
+  cursor: pointer;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.5rem 0.75rem;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.project-selector button:hover,
+.project-selector button.is-selected {
+  border-color: #ea580c;
+  background: #ea580c;
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .projects-section {
+    padding-top: 3rem;
+  }
+
+  .project-stage {
+    height: 420px;
+  }
+
+  .project-card {
+    width: min(370px, 48vw);
+  }
+
+  .project-card__image {
+    height: 205px;
+  }
+}
+
+@media (max-width: 640px) {
+  .projects-section {
+    padding: 2.5rem 0 3.5rem;
+  }
+
+  .projects-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .projects-heading {
+    font-size: 2rem;
+  }
+
+  .projects-intro {
+    margin-top: 0.6rem;
+    margin-bottom: 1.25rem;
+    font-size: 0.875rem;
+  }
+
+  .certification-section {
+    padding-top: 2.25rem;
+    padding-bottom: 2.75rem;
+  }
+
+  .certification-section .project-stage {
+    height: 350px;
+  }
+
+  .project-stage {
+    height: 370px;
+  }
+
+  .project-card {
+    top: 0.5rem;
+    width: min(310px, 78vw);
+  }
+
+  .project-card.is-left {
+    transform: translateX(-94%) translateY(2.4rem) rotate(-5deg) scale(0.82);
+  }
+
+  .project-card.is-right {
+    transform: translateX(-6%) translateY(2.4rem) rotate(5deg) scale(0.82);
+  }
+
+  .project-card__image {
+    height: 175px;
+  }
+
+  .project-card__body {
+    min-height: 165px;
+    padding: 0.85rem;
+  }
+
+  .project-card__description {
+    font-size: 0.75rem;
+  }
+
+  .certification-card.is-background {
+    transform: translateX(calc(-50% + var(--cert-x))) translateY(var(--cert-y)) rotate(var(--cert-angle)) scale(0.38);
+    opacity: 0.3;
+  }
+
+  .project-selector {
+    flex-wrap: wrap;
+    margin-top: 0;
+  }
+}

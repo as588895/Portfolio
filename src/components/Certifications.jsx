@@ -1,99 +1,110 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
-import { motion } from "framer-motion";
+import { useState } from "react";
 import { certs } from "../data/certificates";
-
-import "swiper/css";
-import "swiper/css/effect-coverflow";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+import "./Projects.css";
 
 export default function Certifications() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const backgroundPositions = [
+    ["-38vw", "150px", "-10deg"],
+    ["-29vw", "112px", "-8deg"],
+    ["-20vw", "72px", "-6deg"],
+    ["-11vw", "38px", "-4deg"],
+    ["11vw", "38px", "4deg"],
+    ["20vw", "72px", "6deg"],
+    ["29vw", "112px", "8deg"],
+    ["38vw", "150px", "10deg"],
+  ];
+
+  const getCardPosition = (index) => {
+    const offset = (index - activeIndex + certs.length) % certs.length;
+
+    if (offset === 0) return "is-active";
+    return "is-background";
+  };
+
   return (
     <section
       id="certifications"
-      className="py-24 bg-gray-50 dark:bg-slate-900 scroll-mt-24"
+      className="projects-section certification-section bg-gray-50 dark:bg-slate-900 scroll-mt-24"
     >
-      <div className="max-w-7xl mx-auto px-6">
-
-        <h2 className="text-4xl font-bold text-center mb-3">
+      <div className="projects-container max-w-7xl mx-auto px-6">
+        <h2 className="projects-heading text-4xl font-bold text-center">
           Certifications
         </h2>
 
-        <p className="text-center text-gray-500 dark:text-gray-400 mb-12">
+        <p className="projects-intro text-center text-gray-500 dark:text-gray-400">
           Professional certifications earned through continuous learning.
         </p>
 
-        <Swiper
-          effect="coverflow"
-          grabCursor={true}
-          centeredSlides={true}
-          slidesPerView={"auto"}
-          loop={true}
-          navigation
-          pagination={{ clickable: true }}
-          coverflowEffect={{
-            rotate: 0,
-            stretch: 0,
-            depth: 250,
-            modifier: 2,
-            slideShadows: true,
-            scale: 0.9,
-          }}
-          modules={[EffectCoverflow, Pagination, Navigation]}
-          className="pb-12"
-        >
-          {certs.map((c, index) => (
-            <SwiperSlide key={index} className="max-w-md">
-              <motion.div
-                whileHover={{ scale: 1.03 }}
-                transition={{ duration: 0.3 }}
-                className="rounded-3xl overflow-hidden bg-[#0F172A] shadow-2xl"
-              >
-                <img
-                  src={c.image}
-                  alt={c.title}
-                  className="w-full h-80 object-cover"
-                />
+        <div className="project-stage">
+          {certs.map((cert, index) => (
+            <article
+              key={cert.title}
+              className={`project-card certification-card ${getCardPosition(index)}`}
+              style={
+                getCardPosition(index) === "is-background"
+                  ? {
+                      "--cert-x": backgroundPositions[
+                        index < activeIndex ? index : index - 1
+                      ][0],
+                      "--cert-y": backgroundPositions[
+                        index < activeIndex ? index : index - 1
+                      ][1],
+                      "--cert-angle": backgroundPositions[
+                        index < activeIndex ? index : index - 1
+                      ][2],
+                    }
+                  : undefined
+              }
+            >
+              <img
+                src={cert.image}
+                alt={cert.title}
+                className="project-card__image certification-card__image"
+              />
 
-                <div className="p-6">
-                  <p className="text-orange-400 uppercase text-sm">
-                    {c.org}
-                  </p>
+              <div className="project-card__body">
+                <div>
+                  <p className="project-card__category">{cert.org}</p>
+                  <h3 className="project-card__title">{cert.title}</h3>
+                  <p className="certification-card__year">{cert.year}</p>
+                </div>
 
-                  <h3 className="text-2xl font-bold text-white mt-2">
-                    {c.title}
-                  </h3>
+                <div className="project-card__tech">
+                  {cert.tags.map((tag) => (
+                    <span key={tag}>{tag}</span>
+                  ))}
+                </div>
 
-                  <p className="text-gray-400 mt-2">
-                    {c.year}
-                  </p>
-
-                  <div className="flex flex-wrap gap-2 mt-4">
-                    {c.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-xs"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
+                <div className="project-card__actions">
                   <a
-                    href={c.link}
+                    href={cert.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block mt-6 bg-orange-500 hover:bg-orange-600 transition px-5 py-2 rounded-xl text-white font-medium"
+                    className="project-card__link project-card__link--primary"
                   >
                     View Certificate
                   </a>
                 </div>
-              </motion.div>
-            </SwiperSlide>
+              </div>
+            </article>
           ))}
-        </Swiper>
+        </div>
 
+        <div className="project-selector" aria-label="Certification selector">
+          {certs.map((cert, index) => (
+            <button
+              key={cert.title}
+              type="button"
+              className={index === activeIndex ? "is-selected" : ""}
+              onMouseEnter={() => setActiveIndex(index)}
+              onClick={() => setActiveIndex(index)}
+              aria-label={`Show ${cert.title}`}
+            >
+              {index + 1}
+            </button>
+          ))}
+        </div>
       </div>
     </section>
   );

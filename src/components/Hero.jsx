@@ -1,11 +1,55 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import Typewriter from "./Typewriter";
+import "./Hero.css";
 
 export default function Hero() {
+  const heroRef = useRef(null);
+
+  useEffect(() => {
+    const hero = heroRef.current;
+    if (!hero) return undefined;
+
+    let frameId = 0;
+
+    const handlePointerMove = (event) => {
+      cancelAnimationFrame(frameId);
+      frameId = requestAnimationFrame(() => {
+        const bounds = hero.getBoundingClientRect();
+        const x = event.clientX - bounds.left;
+        const y = event.clientY - bounds.top;
+        const offsetX = ((x / bounds.width) - 0.5) * 18;
+        const offsetY = ((y / bounds.height) - 0.5) * 14;
+
+        hero.style.setProperty("--hero-mouse-x", `${x}px`);
+        hero.style.setProperty("--hero-mouse-y", `${y}px`);
+        hero.style.setProperty("--hero-parallax-x", `${offsetX}px`);
+        hero.style.setProperty("--hero-parallax-y", `${offsetY}px`);
+      });
+    };
+
+    hero.addEventListener("pointermove", handlePointerMove);
+
+    return () => {
+      cancelAnimationFrame(frameId);
+      hero.removeEventListener("pointermove", handlePointerMove);
+    };
+  }, []);
+
   return (
-    <section id="home" className="pt-6 pb-10 animated-bg">
-      <div className="grid gap-6 lg:grid-cols-2 items-center">
+    <section ref={heroRef} id="home" className="hero-section pt-6 pb-10 animated-bg">
+      <div className="hero-atmosphere" aria-hidden="true">
+        <span className="hero-orb hero-orb--one" />
+        <span className="hero-orb hero-orb--two" />
+        <span className="hero-scanline" />
+        <span className="hero-cursor-glow" />
+        <span className="hero-corner hero-corner--top" />
+        <span className="hero-corner hero-corner--bottom" />
+      </div>
+      <div className="hero-status" aria-label="Available for work">
+        <span /> Available for work
+      </div>
+      <div className="hero-grid grid gap-6 lg:grid-cols-2 items-center">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -15,7 +59,7 @@ export default function Hero() {
             {/* <div className="text-sm text-muted mb-4">
               &gt; Aman Singh | Full Stack Developer (MERN)
             </div> */}
-            <h1 className="mt-2 sm:mt-0 lg:-mt-12 hero-title-large font-extrabold">
+            <h1 className="mt-2 hero-title-large font-extrabold">
               Hi I'm <span className="text-primary">AMAN SINGH</span>
             </h1>
             <p className="mt-5 text-2xl leading-tight text-secondary dark:text-white max-w-2xl">
@@ -119,7 +163,7 @@ export default function Hero() {
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
-          className="flex justify-center"
+          className="hero-visual flex justify-center"
         >
           {/* <div className="w-full max-w-md">
             <div className="rounded-full bg-gradient-to-r from-primary/10 to-accent/10 p-12 flex items-center justify-center">
@@ -127,12 +171,12 @@ export default function Hero() {
             </div>
           </div> */}
 
-          <div className="w-full max-w-md">
-            <div className="rounded-full bg-gradient-to-r from-primary/10 to-accent/10 p-12 flex items-center justify-center">
+          <div className="hero-image-wrap w-full max-w-md">
+            <div className="hero-image-frame bg-gradient-to-r from-primary/10 to-accent/10 flex items-center justify-center">
               <img
                 src="/aman.png"
                 alt="Aman Singh profile"
-                className="w-65 h-65 rounded-full object-cover object-center shadow-lg"
+                className="hero-image object-cover object-center shadow-lg"
               />
             </div>
           </div>

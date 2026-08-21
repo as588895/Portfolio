@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 :root{
-  --bg: #f8fafc;
-  --surface: #ffffff;
-  --surface-soft: rgba(255,255,255,0.8);
-  --muted: #64748b;
-  --primary: #2563EB;
-  --secondary: #0F172A;
-  --accent: #38BDF8;
-  --border: rgba(15,23,42,0.08);
+  --bg: #f5f3ee;
+  --surface: #fffdf8;
+  --surface-soft: rgba(255,253,248,0.88);
+  --muted: #78716c;
+  --primary: #c96a46;
+  --secondary: #292524;
+  --accent: #e7a17e;
+  --border: rgba(68, 64, 60, 0.14);
 }
 
 html.dark{
@@ -156,6 +156,38 @@ header a:hover{color:var(--primary)}
   .btn-primary, .btn-outline{width:100%;text-align:center}
 }
 
+/* Warm editorial light theme */
+html:not(.dark) body,
+html:not(.dark) #root {
+  background: var(--bg);
+  color: var(--secondary);
+}
+
+html:not(.dark) .btn-primary {
+  background: #c96a46;
+  box-shadow: 0 16px 38px rgba(201, 106, 70, 0.2);
+}
+
+html:not(.dark) .btn-primary:hover {
+  background: #b95d3c;
+  box-shadow: 0 22px 50px rgba(201, 106, 70, 0.26);
+}
+
+html:not(.dark) .card-box {
+  border-color: rgba(68, 64, 60, 0.1);
+  background: rgba(255, 253, 248, 0.72);
+  box-shadow: 0 14px 38px rgba(68, 64, 60, 0.07);
+}
+
+html:not(.dark) header {
+  background: rgba(245, 243, 238, 0.72);
+  border-bottom: 1px solid rgba(68, 64, 60, 0.08);
+}
+
+html:not(.dark) section:not(#home) {
+  background-color: var(--bg);
+}
+
 .skills-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -205,4 +237,35 @@ header a:hover{color:var(--primary)}
   .skills-container {
     grid-template-columns: 1fr;
   }
+}
+
+html:not(.dark) .bg-white,
+html:not(.dark) .bg-gray-50,
+html:not(.dark) .bg-slate-50 {
+  background-color: #f5f3ee;
+}
+
+html:not(.dark) .bg-slate-900,
+html:not(.dark) .bg-slate-950,
+html:not(.dark) .bg-gray-800 {
+  background-color: #eeeae3;
+}
+
+html:not(.dark) .text-white,
+html:not(.dark) .text-gray-300,
+html:not(.dark) .text-gray-400 {
+  color: #57534e;
+}
+
+html:not(.dark) .skill-card {
+  border-color: rgba(201, 106, 70, 0.2);
+  background: rgba(255, 253, 248, 0.68);
+}
+
+html:not(.dark) .skill-card:hover {
+  border-color: #c96a46;
+}
+
+html:not(.dark) .skill-icon {
+  color: #c96a46;
 }

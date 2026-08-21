@@ -1,43 +1,83 @@
-import React from 'react'
+import { FaCalendarAlt, FaChartLine, FaGraduationCap, FaSchool } from "react-icons/fa";
+import "./Education.css";
 
 const timeline = [
-  // {title:'B.Tech Information Technology', org:'IMS Engineering College, Ghaziabad', range:'2023 - 2027', details:'CGPA: 7.79'},
   {
-  title: 'B.Tech Information Technology',
-  org: 'IMS Engineering College, Ghaziabad',
-  range: '2023 - 2027',
-  details: 'Current CGPA: 7.79/10'
-},
-  // {title:'Senior Secondary (PCM)', org:'CBSE', range:'', details:'76.8%'},
-  // {title:'Secondary', org:'CBSE', range:'', details:'70.4%'}
+    title: "B.Tech Information Technology",
+    org: "IMS Engineering College, Ghaziabad",
+    range: "2023 - 2027",
+    details: "Current CGPA: 7.79/10",
+    icon: FaGraduationCap,
+  },
   {
-  title: 'Senior Secondary (Class XII - PCM)',
-  org: 'Central Board of Secondary Education (CBSE)',
-  range: '',
-  details: 'Scored 76.8%'
-},
-{
-  title: 'Secondary (Class X)',
-  org: 'Central Board of Secondary Education (CBSE)',
-  range: '',
-  details: 'Scored 70.4%'
-}
-]
+    title: "Senior Secondary (Class XII - PCM)",
+    org: "Gyan Kunj Sr. Sec. Academy (CBSE)",
+    range: "Completed",
+    details: "Scored 76.8%",
+    icon: FaSchool,
+  },
+  {
+    title: "Secondary (Class X)",
+    org: "Gyan Kunj Sr. Sec. Academy (CBSE)",
+    range: "Completed",
+    details: "Scored 70.4%",
+    icon: FaSchool,
+  },
+];
 
-export default function Education(){
+export default function Education() {
   return (
-    <section id="education" className="py-12">
-      <h2 className="text-3xl font-bold  mb-2">Education</h2>
-      <div className="mt-6 border-l-2 border-primary pl-6">
-        {timeline.map((t, i)=> (
-          <div key={i} className="mb-8 relative">
-            <div className="absolute -left-4 top-1 bg-primary w-3 h-3 rounded-full" />
-            <h3 className="font-semibold">{t.title}</h3>
-            <div className="text-sm text-muted">{t.org} {t.range && `• ${t.range}`}</div>
-            <div className="text-sm mt-1">{t.details}</div>
-          </div>
-        ))}
+    <section id="education" className="education-section">
+      <div className="education-container">
+        <div className="education-heading">
+          <span className="education-eyebrow">Academic journey</span>
+          <h2>Education</h2>
+          <p>
+            A steady foundation in technology, problem solving, and full-stack
+            development.
+          </p>
+        </div>
+
+        <div className="education-timeline">
+          {timeline.map((item, index) => {
+            const Icon = item.icon;
+
+            return (
+              <article
+                key={item.title}
+                className={`education-item ${index % 2 === 0 ? "is-left" : "is-right"}`}
+              >
+                <div className="education-marker">
+                  <Icon aria-hidden="true" />
+                </div>
+
+                <div className="education-card">
+                  <div className="education-card__topline">
+                    <span>{index === 0 ? "Current focus" : "Milestone"}</span>
+                    <span className="education-card__number">
+                      0{index + 1}
+                    </span>
+                  </div>
+
+                  <h3>{item.title}</h3>
+                  <p className="education-card__org">{item.org}</p>
+
+                  <div className="education-card__meta">
+                    <span>
+                      <FaCalendarAlt aria-hidden="true" />
+                      {item.range}
+                    </span>
+                    <span>
+                      <FaChartLine aria-hidden="true" />
+                      {item.details}
+                    </span>
+                  </div>
+                </div>
+              </article>
+            );
+          })}
+        </div>
       </div>
     </section>
-  )
+  );
 }

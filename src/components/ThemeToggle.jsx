@@ -2,23 +2,16 @@ import React from 'react'
 import { FaSun, FaMoon } from 'react-icons/fa'
 
 export default function ThemeToggle(){
-  // const [dark, setDark] = React.useState(document.documentElement.classList.contains('dark'))
-  // React.useEffect(()=>{
-  //   const obs = new MutationObserver(()=>setDark(document.documentElement.classList.contains('dark')))
-  //   obs.observe(document.documentElement, { attributes: true })
-  //   return ()=>obs.disconnect()
-  // },[])
-  
-    const [dark, setDark] = React.useState(true)
+  const [dark, setDark] = React.useState(() => localStorage.getItem('theme') === 'dark')
 
 React.useEffect(() => {
   const theme = localStorage.getItem('theme');
 
-  if (theme === 'light') {
-    document.documentElement.classList.remove('dark');
-  } else {
+  if (theme === 'dark') {
     document.documentElement.classList.add('dark');
-    localStorage.setItem('theme', 'dark');
+  } else {
+    document.documentElement.classList.remove('dark');
+    if (!theme) localStorage.setItem('theme', 'light');
   }
 }, []);
 

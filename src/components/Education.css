@@ -1,0 +1,228 @@
+.education-section {
+  position: relative;
+  overflow: hidden;
+  padding: 3.5rem 1.5rem;
+  background:
+    radial-gradient(circle at 12% 20%, rgba(56, 189, 248, 0.12), transparent 28%),
+    radial-gradient(circle at 88% 78%, rgba(37, 99, 235, 0.1), transparent 28%);
+}
+
+.education-container {
+  width: min(1000px, 100%);
+  margin: 0 auto;
+}
+
+.education-heading {
+  max-width: 620px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.education-eyebrow {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  color: var(--primary);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.education-heading h2 {
+  margin: 0;
+  color: var(--secondary);
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.05;
+  font-weight: 800;
+}
+
+.education-heading p {
+  margin: 0.65rem auto 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.education-timeline {
+  position: relative;
+  margin-top: 2.25rem;
+  padding: 0.25rem 0 0.5rem;
+}
+
+.education-timeline::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: linear-gradient(180deg, transparent, var(--primary), var(--accent), transparent);
+  content: "";
+  transform: translateX(-50%);
+}
+
+.education-item {
+  position: relative;
+  display: flex;
+  width: 50%;
+  margin-bottom: 1.15rem;
+}
+
+.education-item:last-child {
+  margin-bottom: 0;
+}
+
+.education-item.is-left {
+  justify-content: flex-end;
+  padding-right: 3.5rem;
+  text-align: right;
+}
+
+.education-item.is-right {
+  margin-left: 50%;
+  padding-left: 3.5rem;
+}
+
+.education-marker {
+  position: absolute;
+  top: 1.5rem;
+  left: 100%;
+  z-index: 2;
+  display: grid;
+  width: 2.75rem;
+  height: 2.75rem;
+  place-items: center;
+  border: 5px solid var(--bg);
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.28);
+  transform: translateX(-50%);
+}
+
+.education-marker svg {
+  font-size: 1rem;
+}
+
+.education-item.is-right .education-marker {
+  left: 0;
+  transform: translateX(-50%);
+}
+
+.education-card {
+  width: min(410px, 100%);
+  padding: 1rem 1.2rem;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--surface-soft);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+  text-align: left;
+  backdrop-filter: blur(14px);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-card:hover {
+  border-color: rgba(37, 99, 235, 0.35);
+  box-shadow: 0 24px 60px rgba(37, 99, 235, 0.15);
+  transform: translateY(-6px);
+}
+
+.education-card__topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--primary);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.education-card__number {
+  color: var(--muted);
+  font-size: 0.8rem;
+  letter-spacing: 0;
+}
+
+.education-card h3 {
+  margin: 0.5rem 0 0;
+  color: var(--secondary);
+  font-size: clamp(1.05rem, 1.8vw, 1.35rem);
+  line-height: 1.25;
+  font-weight: 800;
+}
+
+.education-card__org {
+  margin: 0.45rem 0 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+
+.education-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  margin-top: 0.75rem;
+  color: var(--secondary);
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.education-card__meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.education-card__meta svg {
+  color: var(--primary);
+}
+
+@media (max-width: 700px) {
+  .education-section {
+    padding: 2.75rem 1rem;
+  }
+
+  .education-timeline {
+    margin-top: 1.75rem;
+    padding-left: 2.5rem;
+  }
+
+  .education-timeline::before {
+    left: 0.75rem;
+    transform: none;
+  }
+
+  .education-item,
+  .education-item.is-right {
+    display: block;
+    width: 100%;
+    margin-left: 0;
+    padding: 0;
+    text-align: left;
+  }
+
+  .education-item.is-left {
+    justify-content: initial;
+    padding-right: 0;
+  }
+
+  .education-marker,
+  .education-item.is-right .education-marker {
+    top: 1.35rem;
+    left: -1.75rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    transform: translateX(-50%);
+  }
+
+  .education-card {
+    width: 100%;
+    padding: 0.95rem;
+  }
+
+  .education-card__meta {
+    gap: 0.6rem;
+  }
+}
