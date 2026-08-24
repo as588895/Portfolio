@@ -1,10 +1,18 @@
 import { useState } from "react";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { certs } from "../data/certificates";
 import "./Projects.css";
 
 export default function Certifications() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const showPreviousCertificate = () => {
+    setActiveIndex((currentIndex) => (currentIndex - 1 + certs.length) % certs.length);
+  };
+  const showNextCertificate = () => {
+    setActiveIndex((currentIndex) => (currentIndex + 1) % certs.length);
+  };
   const backgroundPositions = [
+    ["-47vw", "190px", "-12deg"],
     ["-38vw", "150px", "-10deg"],
     ["-29vw", "112px", "-8deg"],
     ["-20vw", "72px", "-6deg"],
@@ -37,6 +45,16 @@ export default function Certifications() {
         </p>
 
         <div className="project-stage">
+          <button
+            type="button"
+            className="carousel-arrow carousel-arrow--previous"
+            onClick={showPreviousCertificate}
+            aria-label="Show previous certificate"
+            title="Previous certificate"
+          >
+            <FaChevronLeft aria-hidden="true" />
+          </button>
+
           {certs.map((cert, index) => (
             <article
               key={cert.title}
@@ -89,6 +107,16 @@ export default function Certifications() {
               </div>
             </article>
           ))}
+
+          <button
+            type="button"
+            className="carousel-arrow carousel-arrow--next"
+            onClick={showNextCertificate}
+            aria-label="Show next certificate"
+            title="Next certificate"
+          >
+            <FaChevronRight aria-hidden="true" />
+          </button>
         </div>
 
         <div className="project-selector" aria-label="Certification selector">

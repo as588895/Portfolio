@@ -21,6 +21,38 @@
   perspective: 1400px;
 }
 
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 6;
+  display: grid;
+  width: 2.75rem;
+  height: 2.75rem;
+  place-items: center;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--primary);
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(68, 64, 60, 0.16);
+  transform: translateY(-50%);
+  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.carousel-arrow:hover {
+  background: var(--primary);
+  color: #fff;
+  transform: translateY(-50%) scale(1.08);
+}
+
+.carousel-arrow--previous {
+  left: 1rem;
+}
+
+.carousel-arrow--next {
+  right: 1rem;
+}
+
 .project-card {
   position: absolute;
   top: 2rem;
@@ -69,7 +101,7 @@
 .certification-card.is-background {
   z-index: 1;
   transform: translateX(calc(-50% + var(--cert-x))) translateY(var(--cert-y)) rotate(var(--cert-angle)) scale(0.5);
-  filter: blur(7px);
+  filter: blur(3px);
   opacity: 0.28;
 }
 
@@ -259,6 +291,14 @@
   .project-card__image {
     height: 205px;
   }
+
+  .carousel-arrow--previous {
+    left: 0.25rem;
+  }
+
+  .carousel-arrow--next {
+    right: 0.25rem;
+  }
 }
 
 @media (max-width: 640px) {
@@ -297,6 +337,19 @@
   .project-card {
     top: 0.5rem;
     width: min(310px, 78vw);
+  }
+
+  .carousel-arrow {
+    width: 2.35rem;
+    height: 2.35rem;
+  }
+
+  .carousel-arrow--previous {
+    left: 0;
+  }
+
+  .carousel-arrow--next {
+    right: 0;
   }
 
   .project-card.is-left {

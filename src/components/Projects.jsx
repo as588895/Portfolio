@@ -1,10 +1,16 @@
 import { useState } from "react";
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { FaChevronLeft, FaChevronRight, FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { projects } from "../data/projects";
 import "./Projects.css";
 
 export default function Projects() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const showPreviousProject = () => {
+    setActiveIndex((currentIndex) => (currentIndex - 1 + projects.length) % projects.length);
+  };
+  const showNextProject = () => {
+    setActiveIndex((currentIndex) => (currentIndex + 1) % projects.length);
+  };
 
   const getCardPosition = (index) => {
     const offset = (index - activeIndex + projects.length) % projects.length;
@@ -30,6 +36,16 @@ export default function Projects() {
         </p>
 
         <div className="project-stage">
+          <button
+            type="button"
+            className="carousel-arrow carousel-arrow--previous"
+            onClick={showPreviousProject}
+            aria-label="Show previous project"
+            title="Previous project"
+          >
+            <FaChevronLeft aria-hidden="true" />
+          </button>
+
           {projects.map((project, index) => (
             <article
               key={index}
@@ -83,6 +99,16 @@ export default function Projects() {
               </div>
             </article>
           ))}
+
+          <button
+            type="button"
+            className="carousel-arrow carousel-arrow--next"
+            onClick={showNextProject}
+            aria-label="Show next project"
+            title="Next project"
+          >
+            <FaChevronRight aria-hidden="true" />
+          </button>
         </div>
 
         <div className="project-selector" aria-label="Project selector">

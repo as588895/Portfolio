@@ -3,6 +3,7 @@ import analytics from "../assets/certificates/appwars.jpg";
 import java from "../assets/certificates/java.jpg";
 import mern from "../assets/certificates/mern.jpg";
 import cisco from "../assets/certificates/cisco.jpg";
+import disEntrepreneurship from "../assets/certificates/dis-entrepreneurship.jpg";
 import ai from "../assets/certificates/ibm-ai.jpg";
 import aiFund from "../assets/certificates/ai-fundamental.jpg";
 import pm from "../assets/certificates/project-management.jpg";
@@ -48,11 +49,20 @@ link:"https://www.linkedin.com/feed/update/urn:li:activity:7441030265612767232/"
 
 {
 title:"Introduction to CyberSecurity",
-org:"Cisco",
+org:"Cisco Networking Academy",
 year:"Jul 2026",
 image:cisco,
 tags:["Networking","Cyber Security"],
 link:"https://www.linkedin.com/feed/update/urn:li:activity:7481288132907192320/"
+},
+
+{
+title:"Discovering Entrepreneurship",
+org:"Cisco Networking Academy",
+year:"Aug 2026",
+image:disEntrepreneurship,
+tags:["Entrepreneurship", "Cisco Networking Academy"],
+link:"https://www.linkedin.com/feed/update/urn:li:activity:7493637684372897792/"
 },
 
 {
