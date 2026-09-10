@@ -50,7 +50,7 @@ export default function Projects() {
             <article
               key={index}
               className={`project-card ${getCardPosition(index)}`}
-              onMouseEnter={() => setActiveIndex(index)}
+              // onMouseEnter={() => setActiveIndex(index)}
             >
               <img
                 src={project.image}
@@ -117,7 +117,7 @@ export default function Projects() {
               key={project.title}
               type="button"
               className={index === activeIndex ? "is-selected" : ""}
-              onMouseEnter={() => setActiveIndex(index)}
+              // onMouseEnter={() => setActiveIndex(index)}
               onClick={() => setActiveIndex(index)}
               aria-label={`Show ${project.title}`}
             >

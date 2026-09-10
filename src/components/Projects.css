@@ -90,6 +90,23 @@
   opacity: 0.74;
 }
 
+/* Background card hover effect */
+.project-card.is-left:hover {
+  z-index: 5;
+  transform: translateX(-105%) translateY(2.5rem) rotate(-7deg) scale(0.98);
+  filter: blur(0);
+  opacity: 1;
+  box-shadow: 0 28px 70px rgba(201, 106, 70, 0.24);
+}
+
+.project-card.is-right:hover {
+  z-index: 5;
+  transform: translateX(5%) translateY(2.5rem) rotate(7deg) scale(0.98);
+  filter: blur(0);
+  opacity: 1;
+  box-shadow: 0 28px 70px rgba(201, 106, 70, 0.24);
+}
+
 .project-card.is-hidden {
   z-index: 0;
   visibility: hidden;
