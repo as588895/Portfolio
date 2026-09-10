@@ -72,7 +72,7 @@ link:"https://www.linkedin.com/feed/update/urn:li:activity:7493637684372897792/"
   year: "Aug 2026",
   image:analytics,
   tags: ["Data Analytics", "Cisco Networking Academy"],
-  link: "YOUR_LINKEDIN_POST_URL"
+  link: "https://www.linkedin.com/feed/update/urn:li:activity:7498241521754906624/"
 },
 
 {
