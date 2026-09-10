@@ -2,7 +2,7 @@ import "./Achievements.css";
 
 const counters = [
   { label: "DSA Problems Solved", value: "250+" },
-  { label: "LeetCode Streak Badges", value: "50 / 100 Days" },
+  { label: "LeetCode Streak Badges", value: "50 / 100 / 200 Days" },
   { label: "HackerRank Rating", value: "3 Star" },
 ];
 

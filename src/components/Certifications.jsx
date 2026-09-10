@@ -21,6 +21,7 @@ export default function Certifications() {
     ["20vw", "72px", "6deg"],
     ["29vw", "112px", "8deg"],
     ["38vw", "150px", "10deg"],
+    ["47vw", "190px", "12deg"],
   ];
 
   const getCardPosition = (index) => {

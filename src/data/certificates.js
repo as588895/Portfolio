@@ -1,9 +1,10 @@
 import alpha from "../assets/certificates/alpha.jpg";
-import analytics from "../assets/certificates/appwars.jpg";
+import appwars from "../assets/certificates/appwars.jpg";
 import java from "../assets/certificates/java.jpg";
 import mern from "../assets/certificates/mern.jpg";
 import cisco from "../assets/certificates/cisco.jpg";
 import disEntrepreneurship from "../assets/certificates/dis-entrepreneurship.jpg";
+import analytics from "../assets/certificates/analytics.jpg";
 import ai from "../assets/certificates/ibm-ai.jpg";
 import aiFund from "../assets/certificates/ai-fundamental.jpg";
 import pm from "../assets/certificates/project-management.jpg";
@@ -42,7 +43,7 @@ link:"https://www.linkedin.com/posts/aman-singh-222364298_java-fullstackdevelopm
 title:"Data Analytics Workshop",
 org:"Appwars Technologies",
 year:"Mar 2026",
-image:analytics,
+image:appwars,
 tags:["Excel","Analytics"],
 link:"https://www.linkedin.com/feed/update/urn:li:activity:7441030265612767232/"
 },
@@ -63,6 +64,15 @@ year:"Aug 2026",
 image:disEntrepreneurship,
 tags:["Entrepreneurship", "Cisco Networking Academy"],
 link:"https://www.linkedin.com/feed/update/urn:li:activity:7493637684372897792/"
+},
+
+{
+  title: "Data Analytics Essentials",
+  org: "Cisco Networking Academy",
+  year: "Aug 2026",
+  image:analytics,
+  tags: ["Data Analytics", "Cisco Networking Academy"],
+  link: "YOUR_LINKEDIN_POST_URL"
 },
 
 {
