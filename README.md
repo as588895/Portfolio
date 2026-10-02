@@ -87,839 +87,160 @@ The goal of this portfolio is not just to display information, but to demonstrat
 
 ---
 
-# ✨ Key Features
+---
 
-### 🎯 Interactive Hero Section
+## ✨ Key Features
 
-- Animated introduction
-- Typewriter-style developer roles
-- Profile image presentation
-- LinkedIn, GitHub and LeetCode links
-- Resume access
-- Availability indicator
-- Mouse-based parallax interaction
-- Cursor glow effects
-- Animated background atmosphere
+| Feature | Highlights |
+|---|---|
+| 🎯 **Interactive Hero** | Typewriter animation, parallax effects, cursor glow, profile & social links |
+| 🧭 **Responsive Navbar** | Smooth scrolling, mobile menu, section navigation |
+| 🌓 **Dark / Light Mode** | Tailwind dark mode + `localStorage` + system preference |
+| ⚡ **Scroll UX** | Scroll progress, back-to-top & smooth interactions |
+| 🌐 **Tech Orbit** | Animated React/Node/MongoDB/Express/JS/Git technology orbit |
+| 💻 **Skills Showcase** | Languages, frontend, backend, databases & developer tools |
+| 🚀 **Project Showcase** | Interactive project cards with live demos & source links |
+| 📜 **Certifications** | Interactive certification showcase with images & details |
+| 📬 **Contact Form** | EmailJS integration with sending/success/error states |
+| ✨ **Animations** | Framer Motion + custom CSS animations |
+| 📱 **Responsive UI** | Optimized for desktop, tablet & mobile |
 
 ---
 
-### 🧭 Responsive Navigation
+## 🚀 Featured Projects
 
-The portfolio includes a responsive navigation system with:
+### 🏠 WanderNest
+**Travel & Accommodation Platform**
 
-- Home
-- About
-- Skills
-- Projects
-- Certifications
-- Contact
+`Node.js` `Express.js` `MongoDB` `EJS` `Bootstrap` `Passport.js` `Cloudinary`
 
-Additional functionality:
-
-- Smooth scrolling
-- Desktop navigation
-- Mobile navigation menu
-- Mobile menu toggle
-- React Icons
-- Responsive layout
-
----
-
-### 🌓 Dark / Light Theme
-
-A custom theme system is implemented using:
-
-- React state
-- `localStorage`
-- System color preference detection
-- Tailwind's `dark` class strategy
-- Persistent theme selection
-
-The application checks the user's saved preference and falls back to the system's preferred color scheme.
-
----
-
-### ⚡ Scroll Progress Indicator
-
-A dynamic scroll-progress bar is displayed at the top of the page.
-
-It calculates the current scroll percentage and visually communicates how much of the portfolio has been explored.
-
----
-
-### ⌨️ Typewriter Animation
-
-The hero section uses a custom React `Typewriter` component to animate developer-focused statements such as:
-
-```text
-Full Stack MERN Developer
-Building Scalable Web Applications
-DSA & Problem Solving Enthusiast
-```
-
----
-
-### 🌐 Interactive Technology Orbit
-
-The About section contains a custom animated technology orbit.
-
-It showcases:
-
-- React
-- Node.js
-- MongoDB
-- Express
-- JavaScript
-- Git
-
-The component uses:
-
-- React
-- Framer Motion
-- SVG
-- CSS
-- React Icons
-- Animated particles
-- Hover interactions
-- Continuous rotation
-
-The center of the orbit highlights:
-
-```text
-Full Stack
-Developer (MERN)
-
-Building Scalable Applications
-```
-
----
-
-### 💻 Technical Skills Showcase
-
-The Skills section organizes technologies into a visual toolkit.
-
-### Languages
-
-- C
-- Java
-- JavaScript
-- Python
-
-### Frontend
-
-- HTML5
-- CSS3
-- React.js
-- Bootstrap
-- Tailwind CSS
-
-### Backend
-
-- Node.js
-- Express.js
-
-### Databases
-
-- MongoDB
-- MySQL
-- Oracle
-
-### Developer Tools
-
-- Git
-- GitHub
-- VS Code
-- Postman
-- Render
-- Vercel
-
----
-
-# 🚀 Featured Projects
-
-## 1. WanderNest
-
-### Travel & Accommodation Booking Platform
-
-A full-stack travel and accommodation platform focused on real-world booking workflows.
-
-### Features
-
-- User authentication
-- Authorization
-- Accommodation/property listings
-- Reviews
-- Ratings
+- Authentication & authorization
+- Property listings
+- Reviews & ratings
 - Image uploads
-- RESTful APIs
-- Database-driven application
-- Responsive interface
+- REST APIs
 
-### Technologies
-
-```text
-Node.js
-Express.js
-MongoDB
-REST API
-EJS
-Bootstrap
-Passport.js
-Cloudinary
-```
-
-### Links
-
-🌐 **[Live Demo](https://wandernest-travel-accommodation-platform.onrender.com/)**
-
-💻 **[Source Code](https://github.com/as588895/WanderNest-Travel-Accommodation-Platform)**
+🌐 [Live Demo](https://wandernest-travel-accommodation-platform.onrender.com/) · 💻 [Source Code](https://github.com/as588895/WanderNest-Travel-Accommodation-Platform)
 
 ---
 
-## 2. Full Stack Stock Trading Platform
+### 📈 Full Stack Stock Trading Platform
+**Zerodha-inspired MERN application**
 
-### Zerodha-Inspired Trading Application
+`React.js` `Node.js` `Express.js` `MongoDB Atlas` `JWT` `Axios` `React Router`
 
-A MERN-based stock trading platform created to explore financial application workflows and full-stack architecture.
-
-### Features
-
-- Secure authentication
-- JWT authentication
-- Interactive dashboard
-- Watchlist
+- Authentication & JWT
+- Dashboard & watchlist
 - Portfolio management
 - Trading workflows
-- REST APIs
-- MongoDB Atlas
-- Client-side routing
-- Axios API communication
+- REST API integration
 
-### Technologies
+🚧 **Status:** In Progress
 
-```text
-React.js
-Bootstrap
-Node.js
-Express.js
-MongoDB Atlas
-REST API
-JWT
-Axios
-React Router
-```
-
-### Status
-
-🚧 **In Progress**
-
-### Links
-
-🌐 **[Live Demo](https://full-stack-stock-trading-platform-2-rouf.onrender.com/)**
-
-💻 **[Source Code](https://github.com/as588895/Full-Stack-Stock-Trading-Platform)**
+🌐 [Live Demo](https://full-stack-stock-trading-platform-2-rouf.onrender.com/) · 💻 [Source Code](https://github.com/as588895/Full-Stack-Stock-Trading-Platform)
 
 ---
 
-## 3. WeatherPulse
+### 🌦️ WeatherPulse
+**Real-time Weather Application**
 
-### Real-Time Weather Application
+`React.js` `Vite` `Material UI` `OpenWeather API`
 
-A responsive React-based weather application that consumes weather data from the OpenWeather API.
-
-### Features
-
-- Real-time weather updates
-- Temperature information
-- Humidity information
+- Live weather data
+- Temperature & humidity
 - Weather conditions
 - External API integration
 - Responsive interface
-- Modern UI
 
-### Technologies
-
-```text
-React.js
-Vite
-Material UI
-OpenWeather API
-CSS
-```
-
-### Links
-
-🌐 **[Live Demo](https://weatherpulse-g3l8.onrender.com/)**
-
-💻 **[Source Code](https://github.com/as588895/WeatherPulse)**
+🌐 [Live Demo](https://weatherpulse-g3l8.onrender.com/) · 💻 [Source Code](https://github.com/as588895/WeatherPulse)
 
 ---
 
-# 📈 Problem Solving
+## 🛠️ Tech Stack
 
-I continuously practice Data Structures & Algorithms to improve my problem-solving ability and prepare for software engineering roles.
+**Frontend**  
+`React.js` `JavaScript` `HTML5` `CSS3` `Tailwind CSS` `Bootstrap`
+
+**Backend**  
+`Node.js` `Express.js` `REST APIs`
+
+**Database**  
+`MongoDB` `MongoDB Atlas` `MySQL` `Oracle`
+
+**UI / Animation**  
+`Framer Motion` `React Icons` `Custom CSS`
+
+**Integration**  
+`React Router` `EmailJS`
+
+**Tools**  
+`Vite` `Git` `GitHub` `VS Code` `Postman` `Render` `Vercel`
+
+---
+
+## 📊 Problem Solving
 
 | Achievement | Progress |
 |---|---:|
-| DSA Problems Solved | **250+** |
-| LeetCode Streak Badges | **50 / 100 / 200 Days** |
-| HackerRank | **3 Star** |
+| 🧩 DSA Problems | **250+** |
+| 🔥 LeetCode Streaks | **50 / 100 / 200 Days** |
+| ⭐ HackerRank | **3 Star** |
 
-### Profiles
-
-🔹 **[LeetCode](https://leetcode.com/u/amansingh0522/)**
-
-🔹 **[GitHub](https://github.com/as588895)**
+🔗 [LeetCode Profile](https://leetcode.com/u/amansingh0522/) · [GitHub Profile](https://github.com/as588895)
 
 ---
 
-# 🎓 Education
+## 🎓 Education
 
-## B.Tech — Information Technology
+**B.Tech — Information Technology**  
+IMS Engineering College, Ghaziabad · `2023–2027` · **CGPA: 7.79 / 10**
 
-**IMS Engineering College, Ghaziabad**
+**Senior Secondary — PCM**  
+Gyan Kunj Sr. Sec. Academy · CBSE · **76.8%**
 
-📅 2023 – 2027
-
-📊 Current CGPA: **7.79 / 10**
-
----
-
-## Senior Secondary — PCM
-
-**Gyan Kunj Sr. Sec. Academy**
-
-📚 CBSE
-
-📊 Percentage: **76.8%**
+**Secondary**  
+Gyan Kunj Sr. Sec. Academy · CBSE · **70.4%**
 
 ---
 
-## Secondary
+## 📜 Certifications
 
-**Gyan Kunj Sr. Sec. Academy**
+**11+ certifications / learning credentials** across:
 
-📚 CBSE
+`DSA` · `Java Full Stack` · `MERN` · `Data Analytics` · `Cybersecurity` · `AI` · `Project Management` · `Linux`
 
-📊 Percentage: **70.4%**
-
----
-
-# 📜 Certifications
-
-The portfolio includes a dedicated interactive certification showcase.
-
-### Certifications included:
-
-- Alpha DSA with Java — Apna College
-- Java Full Stack Development With Project — EduSkills
-- MERN Full Stack Development With Project — EduSkills
-- Data Analytics Workshop — Appwars Technologies
-- Introduction to CyberSecurity — Cisco Networking Academy
-- Discovering Entrepreneurship — Cisco Networking Academy
-- Data Analytics Essentials — Cisco Networking Academy
-- Getting Started with AI — IBM SkillsBuild
-- Artificial Intelligence Fundamentals — IBM SkillsBuild
-- Project Management Fundamentals — IBM SkillsBuild
-- Linux Fundamentals — Red Hat Academy
-
-Each certification contains:
-
-- Organization
-- Year / duration
-- Technology/topic tags
-- Certificate image
-- External certificate/reference link
+**Organizations:**  
+Apna College · EduSkills · Cisco Networking Academy · IBM SkillsBuild · Red Hat Academy · Appwars Technologies
 
 ---
 
-# 🧩 React Component Architecture
-
-The project follows a component-based structure to keep the UI modular and maintainable.
+## 🧩 Project Architecture
 
 ```text
 src/
-│
-├── App.jsx
-├── main.jsx
-├── index.css
+├── components/
+│   ├── About.jsx
+│   ├── Achievements.jsx
+│   ├── Certifications.jsx
+│   ├── Contact.jsx
+│   ├── Education.jsx
+│   ├── Hero.jsx
+│   ├── Navbar.jsx
+│   ├── Projects.jsx
+│   ├── Skills.jsx
+│   ├── TechOrbit.jsx
+│   ├── ThemeToggle.jsx
+│   └── Typewriter.jsx
 │
 ├── assets/
 │   └── certificates/
-│       ├── ai-fundamental.jpg
-│       ├── alpha.jpg
-│       ├── analytics.jpg
-│       ├── appwars.jpg
-│       ├── cisco.jpg
-│       ├── dis-entrepreneurship.jpg
-│       ├── ibm-ai.jpg
-│       ├── java.jpg
-│       ├── mern.jpg
-│       ├── project-management.jpg
-│       └── redhat.jpg
 │
-├── components/
-│   │
-│   ├── About.jsx
-│   ├── About.css
-│   │
-│   ├── Achievements.jsx
-│   ├── Achievements.css
-│   │
-│   ├── BackToTop.jsx
-│   │
-│   ├── Certifications.jsx
-│   │
-│   ├── Contact.jsx
-│   ├── Contact.css
-│   │
-│   ├── Education.jsx
-│   ├── Education.css
-│   │
-│   ├── Footer.jsx
-│   │
-│   ├── Hero.jsx
-│   ├── Hero.css
-│   │
-│   ├── Loading.jsx
-│   │
-│   ├── Navbar.jsx
-│   ├── Navbar.css
-│   │
-│   ├── Projects.jsx
-│   ├── Projects.css
-│   │
-│   ├── ScrollProgress.jsx
-│   │
-│   ├── Skills.jsx
-│   ├── Skills.css
-│   │
-│   ├── TechOrbit.jsx
-│   ├── TechOrbit.css
-│   │
-│   ├── ThemeToggle.jsx
-│   │
-│   └── Typewriter.jsx
+├── data/
+│   ├── certificates.js
+│   └── projects.js
 │
-└── data/
-    ├── certificates.js
-    └── projects.js
-```
-
----
-
-# 🏗️ Architecture Overview
-
-The application follows a simple component-driven architecture:
-
-```text
-                     ┌─────────────────────┐
-                     │       main.jsx      │
-                     │  React Entry Point  │
-                     └──────────┬──────────┘
-                                │
-                                ▼
-                     ┌─────────────────────┐
-                     │       App.jsx       │
-                     │ Application Layout  │
-                     └──────────┬──────────┘
-                                │
-          ┌─────────────────────┼──────────────────────┐
-          │                     │                      │
-          ▼                     ▼                      ▼
-      Navbar                 Hero                  About
-          │                     │                      │
-          │                     │                 TechOrbit
-          │                     │
-          ▼                     ▼
-      ThemeToggle          Typewriter
-          
-          ┌────────────────────────────────────────────┐
-          │                                            │
-          ▼                                            ▼
-       Skills                                      Education
-          │
-          ▼
-      Projects
-          │
-          ▼
-    Achievements
-          │
-          ▼
-   Certifications
-          │
-          ▼
-      Contact
-          │
-          ▼
-       Footer
-```
-
----
-
-# ✨ UI / UX Features
-
-The portfolio was designed with a focus on modern frontend interaction.
-
-### Implemented UI features
-
-- Responsive design
-- Dark/light mode
-- Smooth scrolling
-- Animated hero section
-- Mouse-follow cursor glow
-- Mouse parallax effects
-- Loading screen
-- Scroll progress indicator
-- Animated technology orbit
-- Interactive project carousel
-- Interactive certification carousel
-- Mobile navigation
-- Hover animations
-- Motion-based transitions
-- Responsive cards
-- Custom CSS animations
-- Accessible navigation labels
-- External profile links
-
----
-
-# 📬 Contact Form
-
-The Contact section is integrated with **EmailJS**.
-
-The form supports:
-
-```text
-Name
-Email
-Message
-```
-
-and communicates with the configured EmailJS service.
-
-The UI also provides feedback states such as:
-
-```text
-Sending...
-Message Sent
-Error
-```
-
-This allows the portfolio to function as an actual contact interface rather than being only a static website.
-
----
-
-# 🌗 Theme System
-
-The project uses Tailwind CSS's class-based dark mode:
-
-```javascript
-darkMode: 'class'
-```
-
-The theme preference is stored using:
-
-```javascript
-localStorage
-```
-
-The application also checks:
-
-```javascript
-window.matchMedia('(prefers-color-scheme: dark)')
-```
-
-This provides a better user experience by respecting both saved preferences and system settings.
-
----
-
-# ⚡ Performance & Frontend Setup
-
-The project uses **Vite** for development and production builds.
-
-### Vite provides:
-
-- Fast development server
-- React integration
-- Optimized production builds
-- Modern ES module workflow
-- Simple project configuration
-
-The Vite configuration uses:
-
-```javascript
-@vitejs/plugin-react
-```
-
----
-
-# 📦 Dependencies
-
-## Core
-
-```text
-react
-react-dom
-react-router-dom
-```
-
-## Styling
-
-```text
-tailwindcss
-postcss
-autoprefixer
-```
-
-## Animation
-
-```text
-framer-motion
-```
-
-## Icons
-
-```text
-react-icons
-```
-
-## Contact Integration
-
-```text
-@emailjs/browser
-```
-
-## Build Tool
-
-```text
-vite
-@vitejs/plugin-react
-```
-
----
-
-# 🔧 Installation
-
-Clone the repository:
-
-```bash
-git clone https://github.com/as588895/Portfolio.git
-```
-
-Move into the project directory:
-
-```bash
-cd Portfolio
-```
-
-Install dependencies:
-
-```bash
-npm install
-```
-
-Start the development server:
-
-```bash
-npm run dev
-```
-
-The Vite development server will then be available locally.
-
----
-
-# 🏭 Production Build
-
-Create an optimized production build:
-
-```bash
-npm run build
-```
-
-Preview the production build:
-
-```bash
-npm run preview
-```
-
----
-
-# 📁 Project Structure
-
-```text
-Portfolio/
-│
-├── public/
-│   ├── aman.png
-│   ├── profile.svg
-│   ├── stock-trading.png
-│   ├── wandernest.png
-│   └── weatherpulse.png
-│
-├── src/
-│   ├── assets/
-│   │   └── certificates/
-│   │
-│   ├── components/
-│   │   ├── About.jsx
-│   │   ├── Achievements.jsx
-│   │   ├── BackToTop.jsx
-│   │   ├── Certifications.jsx
-│   │   ├── Contact.jsx
-│   │   ├── Education.jsx
-│   │   ├── Footer.jsx
-│   │   ├── Hero.jsx
-│   │   ├── Loading.jsx
-│   │   ├── Navbar.jsx
-│   │   ├── Projects.jsx
-│   │   ├── ScrollProgress.jsx
-│   │   ├── Skills.jsx
-│   │   ├── TechOrbit.jsx
-│   │   ├── ThemeToggle.jsx
-│   │   └── Typewriter.jsx
-│   │
-│   ├── data/
-│   │   ├── certificates.js
-│   │   └── projects.js
-│   │
-│   ├── App.jsx
-│   ├── index.css
-│   └── main.jsx
-│
-├── index.html
-├── package.json
-├── package-lock.json
-├── postcss.config.cjs
-├── tailwind.config.cjs
-└── vite.config.js
-```
-
----
-
-# 🎯 What I Learned From Building This
-
-Building this portfolio helped me strengthen practical frontend engineering skills around:
-
-- React component architecture
-- React Hooks
-- State management with `useState`
-- DOM references with `useRef`
-- Side effects with `useEffect`
-- Memoization with `useMemo`
-- Responsive layouts
-- Tailwind CSS
-- Custom CSS architecture
-- Framer Motion animations
-- API/service integration
-- EmailJS
-- Browser `localStorage`
-- System theme detection
-- Responsive navigation
-- Git & GitHub workflow
-- Vite-based development
-- Production deployment
-
----
-
-# 🧠 Engineering Concepts Demonstrated
-
-### React
-
-- Functional components
-- Props
-- Hooks
-- Conditional rendering
-- Component composition
-- Reusable UI components
-
-### JavaScript
-
-- ES Modules
-- Array mapping
-- Event handling
-- DOM APIs
-- Browser storage
-- Async operations
-- Promise handling
-
-### Frontend Engineering
-
-- Responsive layouts
-- Mobile-first considerations
-- Accessibility attributes
-- Interactive states
-- Animation lifecycle
-- Performance-aware event handling
-
----
-
-# 📊 Portfolio Highlights
-
-| Area | Implementation |
-|---|---|
-| Frontend | React.js |
-| Build Tool | Vite |
-| Styling | Tailwind CSS + Custom CSS |
-| Animation | Framer Motion |
-| Icons | React Icons |
-| Routing | React Router |
-| Contact | EmailJS |
-| Theme | Dark / Light |
-| Navigation | Responsive |
-| Projects | Interactive Carousel |
-| Certifications | Interactive Carousel |
-| Skills | Categorized UI |
-| Hero | Typewriter + Parallax |
-| About | Animated Tech Orbit |
-| Scroll UX | Progress Indicator |
-| Deployment | Render / Vercel compatible |
-
----
-
-# 🌐 Connect With Me
-
-<p align="center">
-
-<a href="https://www.aman-singh.dev/" target="_blank">
-<img src="https://img.shields.io/badge/Portfolio-Visit%20Website-2563EB?style=for-the-badge" />
-</a>
-
-<a href="https://github.com/as588895" target="_blank">
-<img src="https://img.shields.io/badge/GitHub-Follow%20Me-181717?style=for-the-badge&logo=github&logoColor=white" />
-</a>
-
-<a href="https://www.linkedin.com/in/aman-singh-222364298/" target="_blank">
-<img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
-</a>
-
-<a href="https://leetcode.com/u/amansingh0522/" target="_blank">
-<img src="https://img.shields.io/badge/LeetCode-View%20Profile-FFA116?style=for-the-badge&logo=leetcode&logoColor=white" />
-</a>
-
-</p>
-
----
-
-# 🤝 Open To Opportunities
-
-I'm currently interested in:
-
-- SDE Internships
-- Full Stack Development Internships
-- MERN Stack Opportunities
-- Software Development Roles
-- Collaborative Development Projects
-- Open Source Contributions
-
-If you're interested in discussing software development, projects or opportunities, feel free to connect.
-
----
-
-<div align="center">
-
-### Build. Learn. Solve. Ship. Repeat. 🚀
-
-⭐ **Thanks for visiting my portfolio repository!**
+├── App.jsx
+├── main.jsx
+└── index.css
 
 </div>
