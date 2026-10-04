@@ -3,52 +3,70 @@ export const projects = [
     title: "WanderNest - Travel & Accommodation Booking Platform",
     desc: "Full-stack travel & accommodation booking platform with authentication, reviews, ratings, image uploads and RESTful APIs.",
     tech: [
+      "React.js",
       "Node.js",
+      "Vite",
       "Express.js",
       "MongoDB",
       "REST API",
       "EJS",
       "Bootstrap",
       "Passport.js",
-      "Cloudinary"
+      "Cloudinary",
+      "Razorpay",
+      "Render",
     ],
-    live: "https://wandernest-travel-accommodation-platform.onrender.com/",
+    live: "https://wandernest-7dn2.onrender.com/",
     repo: "https://github.com/as588895/WanderNest-Travel-Accommodation-Platform",
-    image: "/wandernest.png"
+    image: "/wandernest.png",
   },
 
- {
-  title: "Full Stack Stock Trading Platform",
-  desc: "A full-stack Zerodha-inspired stock trading platform featuring secure authentication, an interactive dashboard, watchlist, portfolio management, and trading workflows. Built with the MERN stack and continuously enhanced with new features.",
-  tech: [
-    "React.js",
-    "Bootstrap",
-    "Node.js",
-    "Express.js",
-    "MongoDB Atlas",
-    "REST API",
-  "JWT Authentication",
-  "Axios",
-  "React Router"
-  ],
-  status: "In Progress",
-  repo: "https://github.com/as588895/Full-Stack-Stock-Trading-Platform",
-  live: "https://full-stack-stock-trading-platform-2-rouf.onrender.com/",
-  image: "/stock-trading.png"
-},
+  {
+    title: "Full Stack Stock Trading Platform",
+    desc: "A full-stack Zerodha-inspired stock trading platform featuring secure authentication, an interactive dashboard, watchlist, portfolio management, and trading workflows. Built with the MERN stack and continuously enhanced with new features.",
+    tech: [
+      "React.js",
+      "Bootstrap",
+      "Node.js",
+      "Express.js",
+      "MongoDB Atlas",
+      "REST API",
+      "JWT Authentication",
+      "Axios",
+      "React Router",
+    ],
+    status: "In Progress",
+    repo: "https://github.com/as588895/Full-Stack-Stock-Trading-Platform",
+    live: "https://full-stack-stock-trading-platform-2-rouf.onrender.com/",
+    image: "/stock-trading.png",
+  },
+  {
+    title: "SURAKSHA-X",
+    desc: "A full-stack hazard detection and relocation management system that helps identify disaster risks, monitor affected populations, detect risk levels, and generate safe-location based relocation recommendations. Built with the MERN stack with an intelligent risk prediction system.",
+    tech: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB Atlas",
+      "REST API",
+      "Axios",
+      "Mapbox",
+      "Risk Prediction",
+      "Geolocation",
+      "Responsive UI",
+    ],
+    status: "Working",
+    repo: "https://github.com/as588895/SURAKSHA-X",
+    live: "YOUR_LIVE_LINK_HERE",
+    image: "/suraksha-x.png",
+  },
 
- {
-  title: "WeatherPulse",
-  desc: "A modern React-based weather application that provides real-time weather updates, temperature, humidity, and weather conditions using the OpenWeather API with a responsive and user-friendly interface.",
-  tech: [
-    "React.js",
-    "Vite",
-    "Material UI",
-    "OpenWeather API",
-    "CSS"
-  ],
-  live: "https://weatherpulse-g3l8.onrender.com/",
-  repo: "https://github.com/as588895/WeatherPulse",
-  image: "/weatherpulse.png"
-}
+  {
+    title: "WeatherPulse",
+    desc: "A modern React-based weather application that provides real-time weather updates, temperature, humidity, and weather conditions using the OpenWeather API with a responsive and user-friendly interface.",
+    tech: ["React.js", "Vite", "Material UI", "OpenWeather API", "CSS"],
+    live: "https://weatherpulse-g3l8.onrender.com/",
+    repo: "https://github.com/as588895/WeatherPulse",
+    image: "/weatherpulse.png",
+  },
 ];
