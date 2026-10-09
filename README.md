@@ -1,246 +1,168 @@
+
 <div align="center">
 
 # 👋 Hi, I'm Aman Singh
 
 ### Full Stack Developer (MERN) · Problem Solver · B.Tech IT '27
 
-<p>
-  <a href="https://www.aman-singh.dev/" target="_blank">
-    <img src="https://img.shields.io/badge/🌐%20Portfolio-aman--singh.dev-2563EB?style=for-the-badge" alt="Portfolio" />
-  </a>
-  <a href="https://github.com/as588895" target="_blank">
-    <img src="https://img.shields.io/badge/GitHub-as588895-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
-  </a>
-  <a href="https://www.linkedin.com/in/aman-singh-222364298/" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-Aman%20Singh-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
-  </a>
-  <a href="https://leetcode.com/u/amansingh0522/" target="_blank">
-    <img src="https://img.shields.io/badge/LeetCode-amansingh0522-FFA116?style=for-the-badge&logo=leetcode&logoColor=white" alt="LeetCode" />
-  </a>
-</p>
+**B.Tech Information Technology @ IMS Engineering College, Ghaziabad (2023–2027)**
 
-<p>
-  <strong>Building responsive, interactive and production-oriented web experiences.</strong>
-</p>
+Building responsive web experiences, full-stack applications, and practical software solutions.
+
+[![Portfolio](https://img.shields.io/badge/Portfolio-Visit%20Website-2563EB?style=for-the-badge&logo=googlechrome&logoColor=white)](https://www.aman-singh.dev/)
+[![GitHub](https://img.shields.io/badge/GitHub-as588895-181717?style=for-the-badge&logo=github)](https://github.com/as588895)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Aman%20Singh-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/aman-singh-222364298/)
+[![LeetCode](https://img.shields.io/badge/LeetCode-amansingh0522-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](https://leetcode.com/u/amansingh0522/)
 
 </div>
 
 ---
 
-## 🚀 About This Project
+## About Me
 
-This is my **personal developer portfolio**, built with React and designed to present my technical skills, projects, education, certifications, achievements and developer journey in an interactive way.
+I'm Aman Singh, a Full Stack Developer (MERN) and B.Tech Information Technology student at IMS Engineering College, Ghaziabad.
 
-The goal of this portfolio is not just to display information, but to demonstrate how I approach:
+I enjoy building responsive web applications, developing backend APIs, working with databases, and solving data structures and algorithms problems.
 
-- 🎨 Modern and responsive UI development
-- ⚛️ Component-based React architecture
-- ✨ Motion and interactive user experiences
-- 🌓 Dark/light theme implementation
-- 📱 Responsive navigation
-- 📊 Project and certification showcases
-- 📬 Contact form integration
-- 🧩 Reusable React components
-- 🚀 Production-ready frontend development
+**Live Portfolio:** [www.aman-singh.dev](https://www.aman-singh.dev/)
 
-🌐 **Live Portfolio:**  
-**[www.aman-singh.dev](https://www.aman-singh.dev/)**
+## Tech Stack
 
----
-
-# 🛠️ Tech Stack
-
-## Frontend
-
-<p>
-  <img src="https://img.shields.io/badge/React-18.2.0-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
-  <img src="https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
-  <img src="https://img.shields.io/badge/Tailwind%20CSS-3.4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" />
-</p>
-
-## UI & Animation
-
-<p>
-  <img src="https://img.shields.io/badge/Framer%20Motion-10.18-0055FF?style=for-the-badge&logo=framer&logoColor=white" />
-  <img src="https://img.shields.io/badge/React%20Icons-4.12-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
-  <img src="https://img.shields.io/badge/Custom%20CSS-Responsive-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
-</p>
-
-## Application & Integration
-
-<p>
-  <img src="https://img.shields.io/badge/React%20Router-6.14-CA4245?style=for-the-badge&logo=reactrouter&logoColor=white" />
-  <img src="https://img.shields.io/badge/EmailJS-Contact%20Form-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
-  <img src="https://img.shields.io/badge/Vite-8.1-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
-</p>
-
-## Development Tools
-
-<p>
-  <img src="https://img.shields.io/badge/Node.js-Development-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
-  <img src="https://img.shields.io/badge/npm-Package%20Manager-CB3837?style=for-the-badge&logo=npm&logoColor=white" />
-  <img src="https://img.shields.io/badge/Git-Version%20Control-F05032?style=for-the-badge&logo=git&logoColor=white" />
-  <img src="https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white" />
-</p>
-
----
-
----
-
-## ✨ Key Features
-
-| Feature | Highlights |
+| Category | Technologies |
 |---|---|
-| 🎯 **Interactive Hero** | Typewriter animation, parallax effects, cursor glow, profile & social links |
-| 🧭 **Responsive Navbar** | Smooth scrolling, mobile menu, section navigation |
-| 🌓 **Dark / Light Mode** | Tailwind dark mode + `localStorage` + system preference |
-| ⚡ **Scroll UX** | Scroll progress, back-to-top & smooth interactions |
-| 🌐 **Tech Orbit** | Animated React/Node/MongoDB/Express/JS/Git technology orbit |
-| 💻 **Skills Showcase** | Languages, frontend, backend, databases & developer tools |
-| 🚀 **Project Showcase** | Interactive project cards with live demos & source links |
-| 📜 **Certifications** | Interactive certification showcase with images & details |
-| 📬 **Contact Form** | EmailJS integration with sending/success/error states |
-| ✨ **Animations** | Framer Motion + custom CSS animations |
-| 📱 **Responsive UI** | Optimized for desktop, tablet & mobile |
+| Languages | Java, JavaScript, Python, C, SQL |
+| Frontend | HTML5, CSS3, React.js, Bootstrap, Tailwind CSS |
+| Backend | Node.js, Express.js, REST APIs |
+| Databases | MongoDB, MongoDB Atlas, MySQL, Oracle |
+| Tools | Git, GitHub, VS Code, Postman, Vite |
+| UI & Libraries | Framer Motion, React Icons, React Router |
+| Deployment | Render, Vercel |
+| Integrations | EmailJS |
 
----
+## Portfolio Features
 
-## 🚀 Featured Projects
+- Responsive design for desktop, tablet, and mobile.
+- Interactive hero section with animated role text.
+- Dark and light theme toggle.
+- Animated technology orbit.
+- Technical skills and project showcase.
+- Certifications and education sections.
+- DSA achievements and coding profile links.
+- Contact form integrated with EmailJS.
+- Smooth scrolling and back-to-top functionality.
+- Project demo and source-code links.
 
-### 🏠 WanderNest
-**Travel & Accommodation Platform**
+## Featured Projects
 
-`Node.js` `Express.js` `MongoDB` `EJS` `Bootstrap` `Passport.js` `Cloudinary`
+### 1. WanderNest — Travel & Accommodation Booking Platform
 
-- Authentication & authorization
-- Property listings
-- Reviews & ratings
-- Image uploads
-- REST APIs
+A full-stack travel and accommodation platform with listing management, authentication, reviews, ratings, image uploads, and booking functionality.
 
-🌐 [Live Demo](https://wandernest-travel-accommodation-platform.onrender.com/) · 💻 [Source Code](https://github.com/as588895/WanderNest-Travel-Accommodation-Platform)
+**Tech Stack:** React, Vite, Node.js, Express.js, MongoDB, EJS, Bootstrap, Passport.js, Cloudinary, Razorpay, REST APIs.
 
----
+- [Live Demo](https://wandernest-7dn2.onrender.com/)
+- [GitHub Repository](https://github.com/as588895/WanderNest-Travel-Accommodation-Platform)
 
-### 📈 Full Stack Stock Trading Platform
-**Zerodha-inspired MERN application**
+### 2. Full Stack Stock Trading Platform
 
-`React.js` `Node.js` `Express.js` `MongoDB Atlas` `JWT` `Axios` `React Router`
+A Zerodha-inspired stock trading application featuring authentication, an interactive dashboard, watchlist, portfolio management, and trading workflows.
 
-- Authentication & JWT
-- Dashboard & watchlist
-- Portfolio management
-- Trading workflows
-- REST API integration
+**Tech Stack:** React, Node.js, Express.js, MongoDB Atlas, JWT, Axios, React Router, Bootstrap.
 
-🚧 **Status:** In Progress
+- [Live Demo](https://full-stack-stock-trading-platform-2-rouf.onrender.com/)
+- [GitHub Repository](https://github.com/as588895/Full-Stack-Stock-Trading-Platform)
 
-🌐 [Live Demo](https://full-stack-stock-trading-platform-2-rouf.onrender.com/) · 💻 [Source Code](https://github.com/as588895/Full-Stack-Stock-Trading-Platform)
+### 3. SURAKSHA-X
 
----
+A disaster-risk and relocation management project designed to help assess hazards, monitor affected populations, and support safer-location recommendations.
 
-### 🌦️ WeatherPulse
-**Real-time Weather Application**
+**Tech Stack:** React, Node.js, Express.js, MongoDB Atlas, REST APIs, Axios, Mapbox, Geolocation.
 
-`React.js` `Vite` `Material UI` `OpenWeather API`
+- [GitHub Repository](https://github.com/as588895/SURAKSHA-X)
 
-- Live weather data
-- Temperature & humidity
-- Weather conditions
-- External API integration
-- Responsive interface
+### 4. WeatherPulse
 
-🌐 [Live Demo](https://weatherpulse-g3l8.onrender.com/) · 💻 [Source Code](https://github.com/as588895/WeatherPulse)
+A responsive weather application that displays weather conditions, temperature, and humidity using a weather API.
 
----
+**Tech Stack:** React, Vite, Material UI, OpenWeather API, CSS.
 
-## 🛠️ Tech Stack
+- [Live Demo](https://weatherpulse-g3l8.onrender.com/)
+- [GitHub Repository](https://github.com/as588895/WeatherPulse)
 
-**Frontend**  
-`React.js` `JavaScript` `HTML5` `CSS3` `Tailwind CSS` `Bootstrap`
+## Problem Solving
 
-**Backend**  
-`Node.js` `Express.js` `REST APIs`
+- Solved 200+ DSA problems on coding platforms.
+- Practicing Data Structures and Algorithms using Java.
+- LeetCode profile and coding achievements.
+- HackerRank 3-star badge.
 
-**Database**  
-`MongoDB` `MongoDB Atlas` `MySQL` `Oracle`
+Profiles: [LeetCode](https://leetcode.com/u/amansingh0522/) | [GitHub](https://github.com/as588895)
 
-**UI / Animation**  
-`Framer Motion` `React Icons` `Custom CSS`
-
-**Integration**  
-`React Router` `EmailJS`
-
-**Tools**  
-`Vite` `Git` `GitHub` `VS Code` `Postman` `Render` `Vercel`
-
----
-
-## 📊 Problem Solving
-
-| Achievement | Progress |
-|---|---:|
-| 🧩 DSA Problems | **250+** |
-| 🔥 LeetCode Streaks | **50 / 100 / 200 Days** |
-| ⭐ HackerRank | **3 Star** |
-
-🔗 [LeetCode Profile](https://leetcode.com/u/amansingh0522/) · [GitHub Profile](https://github.com/as588895)
-
----
-
-## 🎓 Education
+## Education
 
 **B.Tech — Information Technology**  
-IMS Engineering College, Ghaziabad · `2023–2027` · **CGPA: 7.79 / 10**
+IMS Engineering College, Ghaziabad  
+2023–2027 | CGPA: 7.79/10
 
-**Senior Secondary — PCM**  
-Gyan Kunj Sr. Sec. Academy · CBSE · **76.8%**
+**Class XII — PCM**  
+CBSE | 76.8%
 
-**Secondary**  
-Gyan Kunj Sr. Sec. Academy · CBSE · **70.4%**
+**Class X**  
+CBSE | 70.4%
+
+## Certifications
+
+Learning and certifications across:
+
+- Data Structures and Algorithms with Java
+- Java Full Stack Development
+- MERN Stack Development
+- Data Analytics
+- Cybersecurity
+- Artificial Intelligence
+
+Organizations include Apna College, EduSkills, Cisco Networking Academy, IBM SkillsBuild, and Appwars Technologies.
+
+## Run Locally
+
+### Prerequisites
+
+- Node.js
+- npm
+- Git
+
+### Installation
+
+```bash
+git clone https://github.com/as588895/Portfolio.git
+cd Portfolio
+npm install
+npm run dev
+```
+
+Open the local URL displayed in your terminal.
+
+### Production Build
+
+```bash
+npm run build
+npm run preview
+```
+
+The production build will be generated in the `dist/` directory.
+
+## Connect With Me
+
+- **Portfolio:** [aman-singh.dev](https://www.aman-singh.dev/)
+- **GitHub:** [as588895](https://github.com/as588895)
+- **LinkedIn:** [Aman Singh](https://www.linkedin.com/in/aman-singh-222364298/)
+- **LeetCode:** [amansingh0522](https://leetcode.com/u/amansingh0522/)
+- **Email:** as588895@gmail.com
 
 ---
 
-## 📜 Certifications
+<div align="center">
 
-**11+ certifications / learning credentials** across:
-
-`DSA` · `Java Full Stack` · `MERN` · `Data Analytics` · `Cybersecurity` · `AI` · `Project Management` · `Linux`
-
-**Organizations:**  
-Apna College · EduSkills · Cisco Networking Academy · IBM SkillsBuild · Red Hat Academy · Appwars Technologies
-
----
-
-## 🧩 Project Architecture
-
-```text
-src/
-├── components/
-│   ├── About.jsx
-│   ├── Achievements.jsx
-│   ├── Certifications.jsx
-│   ├── Contact.jsx
-│   ├── Education.jsx
-│   ├── Hero.jsx
-│   ├── Navbar.jsx
-│   ├── Projects.jsx
-│   ├── Skills.jsx
-│   ├── TechOrbit.jsx
-│   ├── ThemeToggle.jsx
-│   └── Typewriter.jsx
-│
-├── assets/
-│   └── certificates/
-│
-├── data/
-│   ├── certificates.js
-│   └── projects.js
-│
-├── App.jsx
-├── main.jsx
-└── index.css
+**Thanks for visiting my portfolio repository!**
 
 </div>
