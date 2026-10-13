@@ -19,6 +19,7 @@
   height: 475px;
   margin: 0 auto;
   perspective: 1400px;
+  touch-action: pan-y;
 }
 
 .carousel-arrow {
@@ -90,6 +91,13 @@
   opacity: 0.74;
 }
 
+.project-card.is-far-right {
+  z-index: 0;
+  transform: translateX(48%) translateY(5rem) rotate(10deg) scale(0.72);
+  filter: blur(3px);
+  opacity: 0.5;
+}
+
 /* Background card hover effect */
 .project-card.is-left:hover {
   z-index: 5;
@@ -102,6 +110,14 @@
 .project-card.is-right:hover {
   z-index: 5;
   transform: translateX(5%) translateY(2.5rem) rotate(7deg) scale(0.98);
+  filter: blur(0);
+  opacity: 1;
+  box-shadow: 0 28px 70px rgba(201, 106, 70, 0.24);
+}
+
+.project-card.is-far-right:hover {
+  z-index: 5;
+  transform: translateX(48%) translateY(4.5rem) rotate(10deg) scale(0.78);
   filter: blur(0);
   opacity: 1;
   box-shadow: 0 28px 70px rgba(201, 106, 70, 0.24);
@@ -267,10 +283,12 @@
 }
 
 .project-selector {
+  position: relative;
+  z-index: 6;
   display: flex;
   justify-content: center;
   gap: 0.55rem;
-  margin-top: -0.5rem;
+  margin-top: 3rem;
 }
 
 .project-selector button {
@@ -375,6 +393,11 @@
 
   .project-card.is-right {
     transform: translateX(-6%) translateY(2.4rem) rotate(5deg) scale(0.82);
+  }
+
+  .project-card.is-far-right {
+    transform: translateX(22%) translateY(4rem) rotate(8deg) scale(0.62);
+    opacity: 0.3;
   }
 
   .project-card__image {

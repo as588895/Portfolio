@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import {
   FaChevronLeft,
   FaChevronRight,
@@ -11,6 +11,7 @@ import "./Projects.css";
 
 export default function Projects() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const touchStartX = useRef(null);
 
   const showPreviousProject = () => {
     setActiveIndex(
@@ -25,12 +26,31 @@ export default function Projects() {
     );
   };
 
+  const handleTouchStart = (event) => {
+    touchStartX.current = event.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (event) => {
+    if (touchStartX.current === null) return;
+
+    const touchDistance = event.changedTouches[0].clientX - touchStartX.current;
+    touchStartX.current = null;
+
+    if (Math.abs(touchDistance) < 50) return;
+    if (touchDistance < 0) {
+      showNextProject();
+    } else {
+      showPreviousProject();
+    }
+  };
+
   const getCardPosition = (index) => {
     const offset =
       (index - activeIndex + projects.length) % projects.length;
 
     if (offset === 0) return "is-active";
     if (offset === 1) return "is-right";
+    if (offset === 2 && projects.length === 4) return "is-far-right";
     if (offset === projects.length - 1) return "is-left";
 
     return "is-hidden";
@@ -51,7 +71,11 @@ export default function Projects() {
           polished UI, and scalable backend architecture.
         </p>
 
-        <div className="project-stage">
+        <div
+          className="project-stage"
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+        >
           <button
             type="button"
             className="carousel-arrow carousel-arrow--previous"

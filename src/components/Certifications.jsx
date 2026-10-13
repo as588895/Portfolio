@@ -1,15 +1,32 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { certs } from "../data/certificates";
 import "./Projects.css";
 
 export default function Certifications() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const touchStartX = useRef(null);
   const showPreviousCertificate = () => {
     setActiveIndex((currentIndex) => (currentIndex - 1 + certs.length) % certs.length);
   };
   const showNextCertificate = () => {
     setActiveIndex((currentIndex) => (currentIndex + 1) % certs.length);
+  };
+  const handleTouchStart = (event) => {
+    touchStartX.current = event.touches[0].clientX;
+  };
+  const handleTouchEnd = (event) => {
+    if (touchStartX.current === null) return;
+
+    const touchDistance = event.changedTouches[0].clientX - touchStartX.current;
+    touchStartX.current = null;
+
+    if (Math.abs(touchDistance) < 50) return;
+    if (touchDistance < 0) {
+      showNextCertificate();
+    } else {
+      showPreviousCertificate();
+    }
   };
   const backgroundPositions = [
     ["-47vw", "190px", "-12deg"],
@@ -45,7 +62,11 @@ export default function Certifications() {
           Professional certifications earned through continuous learning.
         </p>
 
-        <div className="project-stage">
+        <div
+          className="project-stage"
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+        >
           <button
             type="button"
             className="carousel-arrow carousel-arrow--previous"
